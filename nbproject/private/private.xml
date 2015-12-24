@@ -5,9 +5,11 @@
         <group>
             <file>file:/C:/xampp/htdocs/KreasiMultiNiaga/application/views/index.html</file>
             <file>file:/C:/xampp/htdocs/KreasiMultiNiaga/css/bootstrap.css</file>
+            <file>file:/C:/xampp/htdocs/KreasiMultiNiaga/application/config/routes.php</file>
             <file>file:/C:/xampp/htdocs/KreasiMultiNiaga/application/controllers/Welcome.php</file>
             <file>file:/C:/xampp/htdocs/KreasiMultiNiaga/application/views/FrontEnd/v_home.php</file>
             <file>file:/C:/xampp/htdocs/KreasiMultiNiaga/css/logo-nav.css</file>
+            <file>file:/C:/xampp/htdocs/KreasiMultiNiaga/application/config/config.php</file>
         </group>
     </open-files>
 </project-private>
