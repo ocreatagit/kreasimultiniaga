@@ -9,7 +9,9 @@ class Welcome extends CI_Controller {
     }
 
     public function index() {
-        $this->load->view('FrontEnd/v_home');
+        $this->load->view('FrontEnd/v_head');
+        $this->load->view('FrontEnd/v_main');
+        $this->load->view('FrontEnd/v_foot');
     }
 
     public function ourProject() {
