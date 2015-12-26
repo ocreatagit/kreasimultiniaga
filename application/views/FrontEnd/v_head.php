@@ -1,31 +1,39 @@
+<!DOCTYPE html>
 <html>
     <head>
-        <title>Kreasi Multi Niaga</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/logo-nav.css" rel="stylesheet">
-        <link href="css/new_css.css" rel="stylesheet">
-        <link rel="stylesheet" href="font-awesome/4.5.0/css/font-awesome.min.css">
+        <title><?php echo $title ?></title>
+        <link href="<?php echo base_url() ?>css/bootstrap.min.css" rel="stylesheet">
+        <link href="<?php echo base_url() ?>css/logo-nav.css" rel="stylesheet">
+        <link href="<?php echo base_url() ?>css/new_css.css" rel="stylesheet">
+        <link rel="stylesheet" href="<?php echo base_url() ?>font-awesome/4.5.0/css/font-awesome.min.css">
+
+<!--        <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>fullscreenslider/css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>fullscreenslider/css/style.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>fullscreenslider/css/custom.css" />
+        <script type="text/javascript" src="<?php echo base_url() ?>fullscreenslider/js/modernizr.custom.79639.js"></script>
+        <noscript>
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>fullscreenslider/css/styleNoJS.css" />
+        </noscript>
         <style>
-        </style>
+            #slider{
+                margin: 0px;
+                padding: 0px;
+                /*height: 67%;*/
+            }
+        </style>-->
+
+        <link href="<?php echo base_url() ?>css/slippry.css" rel="stylesheet" />
     </head>
     <body>
         <div class="container-fluid" style="">
             <div class="row">
                 <div class="col-lg-6">
                     <a class="" id="logo" href="#">
-                        <img src="img/logo_fix.png" alt="" style="">
+                        <img src="<?php echo base_url() ?>img/logo_fix.png" alt="" style="">
                     </a>                    
                 </div>
-                <div id="sosmed" class="col-lg-6 text-right" style="margin-top: 2.5%">
-                    <a href=""><i class="fa fa-facebook-official fa-4x"></i></a>
-                    <a href=""><i class="fa fa-twitter-square fa-4x"></i></a>
-                    <a href=""><i class="fa fa-envelope-square fa-4x"></i></a>
-                    <a href=""><i class="fa fa-linkedin-square fa-4x"></i></a>
-                </div>
+
             </div>
-<!--            <div class="" style="">
-                <a class="" href=""><i class="glyphicon glyphicon-envelope"></i></a>
-            </div>-->
         </div>
         <nav class="navbar navbar-default" id="custom-bootstrap-menu" role="navigation">
             <div class="container-fluid">
@@ -40,15 +48,36 @@
                 </div>
                 <div class="collapse navbar-collapse navbar-menubuilder" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-left">
-                        <li><a href="/">Home</a>
+                        <li id="menu">
+                            <a href="" style="background-color: white; color: black;"><i class="fa fa-list-alt"></i> Menu </a>
+                        </li> 
+                        <li><a href="<?php echo base_url() ?>index.php/Welcome">Beranda</a>
                         </li>
-                        <li><a href="/products">Products</a>
+                        <li><a href="<?php echo base_url() ?>index.php/Welcome/ourProject">Proyek Kami</a>
                         </li>
-                        <li><a href="/about-us">About Us</a>
-                        </li>
-                        <li><a href="/contact">Contact Us</a>
+                        <li><a href="<?php echo base_url() ?>index.php/Welcome/kontakKami/kontakKami">Kontak Kami</a>
                         </li>
                     </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li id="follow">
+                            <a href="" style="background-color: white; color: black;"><i class=""></i> follow us on</a>
+                        </li> 
+                        <li>
+                            <a href=""><i class="fa fa-facebook-official"></i> <span id="facebook">Facebook</span></a>
+                        </li>                        
+                        <li>
+                            <a href=""><i class="fa fa-twitter-square"></i> <span id="twitter">Twitter</span></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa fa-envelope-square"></i> <span id="email">Email</span></a>
+                        </li>
+                    </ul>
+                    <!--<div id="sosmed" class="col-lg-6 text-right" style="margin-top: 2.5%">-->                        
+<!--                        <a href=""><i class="fa fa-twitter-square fa-4x"></i></a>
+                        <a href=""><i class="fa fa-envelope-square fa-4x"></i></a>
+                        <a href=""><i class="fa fa-linkedin-square fa-4x"></i></a>-->
+                    <!--</div>-->
                 </div>
             </div>
         </nav>
