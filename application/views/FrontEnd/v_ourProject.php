@@ -1,37 +1,51 @@
-<html>
-    <head>
-        <title>OUR PROJECT-KREASI MULTI NIAGA</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/logo-nav.css" rel="stylesheet">
-    </head>
-    <body>
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color: white; box-shadow: 0px 5px 1px 0px rgba(136,136,136,0.22);">
-            <div class="container" id="container1">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="" id="myDiv" href="#">
-                        <img src="img/1.png" alt="" style="width: 75%;">
-                    </a>
+<!--<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="jumbotron">
+                <img src="<?php echo base_url() ?>images/ruko.jpg" style="width: 100%;" />
+                <h2 class="text-center">Ruko</h4>
+            </div>
+        </div>
+        <div class="col-lg-6 ">
+            <img src="<?php echo base_url() ?>images/gudang.jpg" style="width: 100%;" />
+            <h4 class="text-center">Gudang</h4>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-3">            
+            <div class="thumbnail">
+                <div class="caption">
+                    <h4>Thumbnail Headline</h4>
+                    <p>short thumbnail description</p>
+                    <p><a href="" class="label label-danger" rel="tooltip" title="Zoom">Zoom</a>
+                        <a href="" class="label label-default" rel="tooltip" title="Download now">Download</a></p>
                 </div>
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="background-color: white;" id="navbar">
-                    <ul class="nav navbar-nav navbar-right" style="padding-top: 0px; padding-bottom: 0px;">
-                        <li class="" style="background-color: magenta">
-                            <a href="#" style="font-size: 18pt;">HOME</a>
-                        </li>
-                        <li>
-                            <a href="#">OUR PROJECT</a>
-                        </li>
-                        <li>
-                            <a href="#">CONTACT US</a>
-                        </li>
-                    </ul>
+                <img src="http://lorempixel.com/400/300/sports/2/" alt="...">
+            </div>
+        </div>
+-->
+<div class="">
+    <div class="row" style="margin-bottom: 1%">
+        <div class="col-lg-6">
+            <div class="hovereffect">
+                <img class="img-responsive" src="<?php echo base_url() ?>images/ruko.jpg" alt="">
+                <div class="overlay">
+                    <h2>Ruko</h2>
+                    <a class="info" href="<?php echo base_url() ?>index.php/welcome/detail_project">Detail</a>
                 </div>
             </div>
-        </nav>
-    </body>
-</html>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="hovereffect">
+                <img class="img-responsive" src="<?php echo base_url() ?>images/gudang.jpg" alt="">
+                <div class="overlay">
+                    <h2>Gudang</h2>
+                    <a class="info" href="#">Detail</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

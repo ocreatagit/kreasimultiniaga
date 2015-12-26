@@ -1,5 +1,4 @@
 <?php
-
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Welcome extends CI_Controller {
@@ -9,18 +8,22 @@ class Welcome extends CI_Controller {
     }
 
     public function index() {
-        $this->load->view('FrontEnd/v_head');
+        $data['title'] = 'KREASI MULTI NIAGA';
+        
+        $this->load->view('FrontEnd/v_head', $data);
         $this->load->view('FrontEnd/v_main');
         $this->load->view('FrontEnd/v_foot');
     }
 
     public function ourProject() {
         $data['title'] = 'OUR PROJECT - KREASI MULTI NIAGA';
-        $this->load->library('project');
-
-        $this->load->view('v_header', $data);
-        $this->load->view('v_cart', $data);
-        $this->load->view('v_footer');
+        
+        $this->load->view('FrontEnd/v_head', $data);
+        $this->load->view('FrontEnd/v_ourProject');
+        $this->load->view('FrontEnd/v_foot');
     }
-
+    
+    public function detail_project(){
+        
+    }
 }
