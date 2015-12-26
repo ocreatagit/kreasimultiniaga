@@ -40,11 +40,13 @@ and open the template in the editor.
     background-color: #ffffff;
 }
 #custom-bootstrap-menu.navbar-default .navbar-toggle .icon-bar {
-    background-color: #ffffff;
+/*    background-color: #ffffff;*/
+    background-color: #F1592A;
 }
 #custom-bootstrap-menu.navbar-default .navbar-toggle:hover .icon-bar,
 #custom-bootstrap-menu.navbar-default .navbar-toggle:focus .icon-bar {
     background-color: #ffa07a;
+
 }
 
 body {
@@ -284,4 +286,8 @@ body {
 .hovereffect:hover a.info {
     -webkit-transition-delay:.2s;
     transition-delay:.2s;
+}
+#map {
+        width: 500px;
+        height: 400px;
 }

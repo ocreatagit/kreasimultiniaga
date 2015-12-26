@@ -55,7 +55,7 @@
                         </li>
                         <li><a href="<?php echo base_url() ?>index.php/Welcome/ourProject">Proyek Kami</a>
                         </li>
-                        <li><a href="/contact">Tentang Kami</a>
+                        <li><a href="<?php echo base_url() ?>index.php/Welcome/kontakKami/kontakKami">Kontak Kami</a>
                         </li>
                     </ul>
 
