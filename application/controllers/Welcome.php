@@ -40,6 +40,12 @@ class Welcome extends CI_Controller {
         
         $this->load->view('FrontEnd/v_head', $data);
         $this->load->view('FrontEnd/v_gudang');
+    }
+    public function kontakKami(){
+        $data['title'] = 'Kontak Kami - KREASI MULTI NIAGA';
+        
+        $this->load->view('FrontEnd/v_head', $data);
+        $this->load->view('FrontEnd/v_contactUS');
         $this->load->view('FrontEnd/v_foot');
     }
 }

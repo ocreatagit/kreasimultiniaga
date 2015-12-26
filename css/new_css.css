@@ -40,11 +40,13 @@ and open the template in the editor.
     background-color: #ffffff;
 }
 #custom-bootstrap-menu.navbar-default .navbar-toggle .icon-bar {
-    background-color: #ffffff;
+    /*    background-color: #ffffff;*/
+    background-color: #F1592A;
 }
 #custom-bootstrap-menu.navbar-default .navbar-toggle:hover .icon-bar,
 #custom-bootstrap-menu.navbar-default .navbar-toggle:focus .icon-bar {
     background-color: #ffa07a;
+
 }
 
 body {
@@ -287,59 +289,63 @@ body {
     -webkit-transition-delay:.2s;
     transition-delay:.2s;
 }
+<<<<<<< HEAD
 
 //---- horizontal timeline
 
 .cd-horizontal-timeline .events-content {
-  position: relative;
+    position: relative;
 }
 .cd-horizontal-timeline .events-content li {
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-  left: 0;
-  top: 0;
-  transform: translateX(-100%);
-  opacity: 0;
-  animation-duration: 0.4s;
-  animation-timing-function: ease-in-out;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    left: 0;
+    top: 0;
+    transform: translateX(-100%);
+    opacity: 0;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in-out;
 }
 .cd-horizontal-timeline .events-content li.selected {
-  /* visible event content */
-  position: relative;
-  z-index: 2;
-  opacity: 1;
-  transform: translateX(0);
+    /* visible event content */
+    position: relative;
+    z-index: 2;
+    opacity: 1;
+    transform: translateX(0);
 }
 .cd-horizontal-timeline .events-content li.enter-right, 
 .cd-horizontal-timeline .events-content li.leave-right {
-  animation-name: cd-enter-right;
+    animation-name: cd-enter-right;
 }
 .cd-horizontal-timeline .events-content li.enter-left, 
 .cd-horizontal-timeline .events-content li.leave-left {
-  animation-name: cd-enter-left;
+    animation-name: cd-enter-left;
 }
 .cd-horizontal-timeline .events-content li.leave-right, 
 .cd-horizontal-timeline .events-content li.leave-left {
-  animation-direction: reverse;
+    animation-direction: reverse;
 }
 @keyframes cd-enter-right {
-  0% {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0%);
-  }
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
 }
 @keyframes cd-enter-left {
-  0% {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0%);
-  }
-}
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    #map {
+        width: 500px;
+        height: 400px;
+    }
