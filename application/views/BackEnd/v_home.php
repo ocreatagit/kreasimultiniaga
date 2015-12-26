@@ -14,7 +14,14 @@
     <form action="<?php echo base_url(); ?>/index.php/backend/upload" class="dropzone"  >
     </form>
     <br>
-    <?php
+    <div class="col-sm-offset-11">
+        <button onclick="document.location.reload(true)" class="btn btn-success" >Refresh</button>
+    </div>
+    <hr>
+    <?php if (count($gambars) == 0): ?>
+    <p class="text-center">Tidak Ada Gambar</p>
+        <?php
+    endif;
     $count = 1;
     foreach ($gambars as $gambar):
         if ($count % 4 == 1):
@@ -31,7 +38,7 @@
             </div>
             <?php if ($count % 4 == 0 || count($gambars) == $count): ?>
             </div>
-        <?php
+            <?php
         endif;
         $count++;
     endforeach;
