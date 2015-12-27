@@ -243,7 +243,6 @@ body {
     transition:all .2s ease-in-out;
     padding:10px;
     margin-top: 5%;
-    font-size: 20px;
 }
 
 .hovereffect a.info {
@@ -289,7 +288,6 @@ body {
     -webkit-transition-delay:.2s;
     transition-delay:.2s;
 }
-<<<<<<< HEAD
 
 //---- horizontal timeline
 
@@ -345,7 +343,23 @@ body {
         opacity: 1;
         transform: translateX(0%);
     }
-    #map {
-        width: 500px;
-        height: 400px;
-    }
+}
+#map {
+    width: 500px;
+    height: 400px;
+}
+
+.siku {
+    border-radius: 0px;
+}
+
+#images {
+    margin-bottom: 0.4%;
+}
+
+.denah_pics {
+/*        padding-left: 1%;
+        padding-right: 1%;*/
+    /*margin-left: 0.5%;*/
+    /*margin-right: 0.5%;*/
+}

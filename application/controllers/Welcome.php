@@ -34,6 +34,15 @@ class Welcome extends CI_Controller {
         $this->load->view('FrontEnd/v_foot');
     }
     
+    public function proses(){
+        $data['title'] = 'PROSES PENGERJAAN - KREASI MULTI NIAGA';
+        $data['navbar'] = 'proses';
+        
+        $this->load->view('FrontEnd/v_head', $data);
+        $this->load->view('FrontEnd/v_proses');
+        $this->load->view('FrontEnd/v_foot');
+    }
+    
     public function gudang(){
         $data['title'] = 'GUDANG - KREASI MULTI NIAGA';
         $data['navbar'] = 'ourProject';
@@ -43,6 +52,7 @@ class Welcome extends CI_Controller {
     }
     public function kontakKami(){
         $data['title'] = 'Kontak Kami - KREASI MULTI NIAGA';
+        $data['navbar'] = 'kontakkami';
         
         $this->load->view('FrontEnd/v_head', $data);
         $this->load->view('FrontEnd/v_contactUS');

@@ -1,120 +1,38 @@
-<section class="cd-horizontal-timeline">
-    <div class="timeline">
-        <div class="events-wrapper">
-            <div class="events">
-                <ol>
-                    <li><a href="#0" data-date="16/01/2014">16 Jan</a></li>
-                    <li><a href="#0" data-date="28/02/2014">28 Feb</a></li>
-                    <li><a href="#0" data-date="20/04/2014">20 Mar</a></li>
-                    <li><a href="#0" data-date="20/05/2014"  class="selected">20 May</a></li>
-                    <li><a href="#0" data-date="09/07/2014">09 Jul</a></li>
-                    <li><a href="#0" data-date="30/08/2014">30 Aug</a></li>
-                    <li><a href="#0" data-date="15/09/2014">15 Sep</a></li>
-                    <li><a href="#0" data-date="01/11/2014">01 Nov</a></li>
-                    <li><a href="#0" data-date="10/12/2014">10 Dec</a></li>
-                    <li><a href="#0" data-date="19/01/2015">29 Jan</a></li>
-                    <li><a href="#0" data-date="03/03/2015">3 Mar</a></li>
-                </ol>
+<div class="panel panel-warning siku">
+    <div class="panel-heading">
+        <h1 class="panel-title" style="font-size: 2em">Ruko 1</h1>
+    </div>
+    <div class="panel-body">
+        <h1 id="images" class="page-header" style="margin-top: 0%;"><i class="fa fa-picture-o"></i> Images</h1>
+        <div class="row" id="">
+            <ul id="lightSlider">
+                <?php
+                for ($i = 0; $i < 6; $i++) {
+                    ?>
+                    <li class="" style="">
+                        <div style="">
+                            <a style="text-decoration: none;" href="<?php echo base_url() ?>images/<?php echo ($i % 3 == 0) ? 3 : $i % 3 ?>.jpg" data-lightbox="roadtrip"> 
+                                <img src="<?php echo base_url() ?>images/<?php echo ($i % 3 == 0) ? 3 : $i % 3 ?>.jpg" style="height: 200px;">
+                                <p class="text-center" style="color: black; opacity: 1;"> Description</p> 
+                            </a>
+                        </div>
+                    </li>
+                <?php } ?>
+            </ul>
+        </div>
+        <h1 id="images" class="page-header" style="margin-top: 0%;"><i class="fa fa-book"></i> Description </h1>
+        <div class="siku text-justify" style="width: 100%">
+            <pre>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elit elit, mollis cursus gravida ut, venenatis et orci. Nulla pellentesque sem faucibus risus consectetur, id aliquet odio sagittis. Sed tellus eros, rutrum id bibendum sit amet, viverra ut tortor. Phasellus in enim semper, vestibulum justo vulputate, feugiat magna. Nullam non est velit. Pellentesque fermentum massa non laoreet blandit. Vivamus laoreet quam est, vel bibendum ante dignissim a. Morbi eget ipsum eu sapien mattis luctus et eget ipsum.
 
-                <span class="filling-line" aria-hidden="true"></span>
-            </div> <!-- .events -->
-        </div> <!-- .events-wrapper -->
+            Vivamus non sollicitudin magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis ultricies vehicula tincidunt. Mauris finibus magna nibh. Quisque justo leo, tincidunt sit amet mauris ac, congue imperdiet mi. In blandit erat a sagittis rhoncus. Quisque suscipit auctor enim. Donec porta ullamcorper imperdiet. Curabitur id augue dapibus mi fringilla rhoncus id sed est. Vivamus tristique metus eu sollicitudin tincidunt. Fusce consequat ligula non porttitor interdum. Pellentesque rhoncus augue eget nisi vulputate, ultrices hendrerit leo volutpat. Aliquam sed purus turpis. Nunc tempus ante varius interdum consequat. Nunc a commodo erat. Integer a augue vitae diam viverra finibus et sed dui.
 
-        <ul class="cd-timeline-navigation">
-            <li><a href="#0" class="prev inactive">Prev</a></li>
-            <li><a href="#0" class="next">Next</a></li>
-        </ul> <!-- .cd-timeline-navigation -->
-    </div> <!-- .timeline -->
+            Aliquam a dolor purus. In ut porttitor ante. Mauris mollis aliquet magna volutpat congue. Vivamus ac ligula tempor, semper mi condimentum, posuere magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque eu lectus tortor. Donec vestibulum metus nisi, at posuere ex tempus in. Nulla ut auctor risus. Sed at tempus libero. Nullam dictum est vitae lobortis consectetur.
 
-    <div class="events-content">
-        <ol>
-            <li data-date="16/01/2014">
-                <h2>Horizontal Timeline</h2>
-                <em>January 16th, 2014</em>
-                <p>	
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-                </p>
-            </li>
+            Pellentesque diam dolor, accumsan eget facilisis ac, feugiat vel tortor. Nullam volutpat risus eget orci volutpat, eget gravida elit fringilla. Nulla consectetur tempor nulla. Phasellus quam turpis, lobortis tincidunt mattis at, condimentum sed ante. Vestibulum vitae tempus dolor, at iaculis nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed luctus lacus id dui placerat semper. Aenean fermentum augue vel nibh fermentum porta. Pellentesque ac lorem elit. Morbi tristique vitae ligula at semper. Suspendisse sit amet laoreet mi. Aliquam id ante et lacus posuere rhoncus eu vel massa. Nulla facilisi. Vestibulum maximus tellus elit. Praesent nisl eros, porta sit amet nisl sed, efficitur pharetra eros.
 
-            <li data-date="28/02/2014">
-                <h2>Event title here</h2>
-                <em>February 28th, 2014</em>
-                <p>	
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-                </p>
-            </li>
-
-            <li data-date="20/04/2014">
-                <h2>Event title here</h2>
-                <em>March 20th, 2014</em>
-                <p>	
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-                </p>
-            </li>
-
-            <li class="selected" data-date="20/05/2014">
-                <h2>Event title here</h2>
-                <em>May 20th, 2014</em>
-                <p>	
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-                </p>
-            </li>
-
-            <li data-date="09/07/2014">
-                <h2>Event title here</h2>
-                <em>July 9th, 2014</em>
-                <p>	
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-                </p>
-            </li>
-
-            <li data-date="30/08/2014">
-                <h2>Event title here</h2>
-                <em>August 30th, 2014</em>
-                <p>	
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-                </p>
-            </li>
-
-            <li data-date="15/09/2014">
-                <h2>Event title here</h2>
-                <em>September 15th, 2014</em>
-                <p>	
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-                </p>
-            </li>
-
-            <li data-date="01/11/2014">
-                <h2>Event title here</h2>
-                <em>November 1st, 2014</em>
-                <p>	
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-                </p>
-            </li>
-
-            <li data-date="10/12/2014">
-                <h2>Event title here</h2>
-                <em>December 10th, 2014</em>
-                <p>	
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-                </p>
-            </li>
-
-            <li data-date="19/01/2015">
-                <h2>Event title here</h2>
-                <em>January 19th, 2015</em>
-                <p>	
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-                </p>
-            </li>
-
-            <li data-date="03/03/2015">
-                <h2>Event title here</h2>
-                <em>March 3rd, 2015</em>
-                <p>	
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-                </p>
-            </li>
-        </ol>
-    </div> <!-- .events-content -->
-</section>
+            Donec eu justo rutrum, mollis nibh ac, vulputate arcu. Nunc sed orci quam. Nunc euismod eros id turpis pretium lobortis. Etiam aliquet quis purus ut volutpat. Nunc vitae fermentum odio. Nullam hendrerit quis tellus in sagittis. Vivamus sagittis augue vitae mauris bibendum, a dignissim est cursus. Fusce mattis, odio et fringilla viverra, risus ex feugiat arcu, vitae faucibus nisl lectus id turpis. Nullam fermentum rhoncus eleifend. Sed condimentum quam auctor, cursus mi vel, congue felis. Integer efficitur dolor quis nunc molestie, at condimentum enim iaculis. Cras tincidunt massa quis dolor luctus, sed tincidunt libero dictum. Vestibulum id dui ullamcorper, dapibus dolor eget, vulputate lorem. Suspendisse tincidunt dolor nibh, varius commodo lectus consectetur quis. Sed at iaculis metus. 
+            </pre>
+        </div>
+    </div>
+</div>

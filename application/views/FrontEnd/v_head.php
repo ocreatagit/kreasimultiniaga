@@ -10,6 +10,10 @@
         
         <link rel="stylesheet" href="<?php echo base_url() ?>horizontal-timeline-master/css/reset.css"> <!-- CSS reset -->
 	<link rel="stylesheet" href="<?php echo base_url() ?>horizontal-timeline-master/css/style.css"> <!-- Resource style -->
+        
+        <link href="<?php echo base_url() ?>lightslider/css/lightslider.min.css" rel="stylesheet">
+        <link href="<?php echo base_url() ?>lightbox/css/lightbox.css" rel="stylesheet">
+        
 	<script src="<?php echo base_url() ?>horizontal-timeline-master/js/modernizr.js"></script> <!-- Modernizr -->
     </head>
     <body>
@@ -36,29 +40,37 @@
                 </div>
                 <div class="collapse navbar-collapse navbar-menubuilder" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-left">
-                        <li id="menu">
+<!--                        <li id="menu">
                             <a href="" style="background-color: white; color: black;"><i class="fa fa-list-alt"></i> Menu </a>
-                        </li> 
+                        </li> -->
                         <li <?php echo $navbar == 'beranda' ? "class='active'": "" ?>><a href="<?php echo base_url() ?>index.php/Welcome">Beranda</a>
                         </li>
                         <li <?php echo $navbar == 'ourProject' ? "class='active'": "" ?>><a href="<?php echo base_url() ?>index.php/Welcome/ourProject">Proyek Kami</a>
                         </li>
-                        <li <?php echo $navbar == 'tentang' ? "class='active'": "" ?>><a href="/contact">Tentang Kami</a>
+                        <li <?php echo $navbar == 'proses' ? "class='active'": "" ?>><a href="<?php echo base_url() ?>index.php/Welcome/proses">Proses Pengerjaan</a>
+                        </li>
+                        <li <?php echo $navbar == 'kontakkami' ? "class='active'": "" ?>><a href="<?php echo base_url() ?>index.php/Welcome/kontakKami">Tentang Kami</a>
                         </li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
-                        <li id="follow">
+<!--                        <li id="follow">
                             <a href="" style="background-color: white; color: black;"><i class=""></i> Follow us on</a>
-                        </li> 
+                        </li> -->
                         <li>
-                            <a href=""><i class="fa fa-facebook-official"></i> <span id="facebook">Facebook</span></a>
+                            <a href=""><i class="fa fa-facebook-official"></i> 
+                                <!--<span id="facebook">Facebook</span>-->
+                            </a>
                         </li>                        
                         <li>
-                            <a href=""><i class="fa fa-twitter-square"></i> <span id="twitter">Twitter</span></a>
+                            <a href=""><i class="fa fa-twitter-square"></i> 
+                                <!--<span id="twitter">Twitter</span>-->
+                            </a>
                         </li>
                         <li>
-                            <a href=""><i class="fa fa-envelope-square"></i> <span id="email">Email</span></a>
+                            <a href=""><i class="fa fa-envelope-square"></i> 
+                                <!--<span id="email">Email</span>-->
+                            </a>
                         </li>
                     </ul>
                     <!--<div id="sosmed" class="col-lg-6 text-right" style="margin-top: 2.5%">-->                        
