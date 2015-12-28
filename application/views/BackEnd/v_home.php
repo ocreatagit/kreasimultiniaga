@@ -4,14 +4,14 @@
     <!-- Page Heading -->
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Page Heading
-                <small>Secondary Text</small>
+            <h1 class="page-header">Beranda
+                <small>Slider</small>
             </h1>
         </div>
     </div>
     <!-- /.row -->
 
-    <form action="<?php echo base_url(); ?>/index.php/backend/upload" class="dropzone"  >
+    <form action="<?php echo base_url(); ?>/index.php/backend/upload_home" class="dropzone"  >
     </form>
     <br>
     <div class="col-sm-offset-11">
@@ -76,17 +76,17 @@
         </div>
          /.row -->
 
-    <hr>
+<!--    <hr>
 
-    <!-- Footer -->
+     Footer 
     <footer>
         <div class="row">
             <div class="col-lg-12">
                 <p>Copyright &copy; Your Website 2014</p>
             </div>
         </div>
-        <!-- /.row -->
-    </footer>
+         /.row 
+    </footer>-->
 
 </div>
 <!-- /.container -->

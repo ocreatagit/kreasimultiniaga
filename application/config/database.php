@@ -47,7 +47,6 @@
 
 $active_group = 'default';
 $active_record = TRUE;
-
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
@@ -69,4 +68,5 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
+
 

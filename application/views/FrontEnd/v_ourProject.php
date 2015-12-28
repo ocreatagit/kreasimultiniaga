@@ -26,14 +26,14 @@
             </div>
         </div>
 -->
-<div class="">
+<div class="" style="padding-left: 0.9%; padding-right: 0.9%;">
     <div class="row" style="margin-bottom: 1%">
         <div class="col-lg-6">
             <div class="hovereffect">
                 <img class="img-responsive" src="<?php echo base_url() ?>images/ruko.jpg" alt="">
                 <div class="overlay">
                     <h2>Ruko</h2>
-                    <a class="info" href="<?php echo base_url() ?>index.php/welcome/detail_project">Detail</a>
+                    <a class="info" href="<?php echo base_url() ?>index.php/welcome/ruko">Detail</a>
                 </div>
             </div>
         </div>
@@ -43,7 +43,7 @@
                 <img class="img-responsive" src="<?php echo base_url() ?>images/gudang.jpg" alt="">
                 <div class="overlay">
                     <h2>Gudang</h2>
-                    <a class="info" href="#">Detail</a>
+                    <a class="info" href="<?php echo base_url() ?>index.php/welcome/ruko">Detail</a>
                 </div>
             </div>
         </div>
