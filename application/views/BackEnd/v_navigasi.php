@@ -9,20 +9,20 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Start Bootstrap</a>
+                <a class="navbar-brand" href="#">Kreasi Multi Niaga Admin</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">About</a>
+                        <a href="<?php echo base_url() ?>index.php/backend">Unggah Slider</a>
                     </li>
                     <li>
-                        <a href="#">Services</a>
+                        <a href="<?php echo base_url() ?>index.php/backend/uang_kas">Uang Kas</a>
                     </li>
-                    <li>
+<!--                    <li>
                         <a href="#">Contact</a>
-                    </li>
+                    </li>-->
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

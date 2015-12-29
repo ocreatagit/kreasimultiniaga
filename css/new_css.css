@@ -12,7 +12,7 @@ and open the template in the editor.
     color: rgba(255, 255, 255, 1);
 }
 #custom-bootstrap-menu.navbar-default {
-    font-size: 23px;
+    font-size: 20px;
     background-color: rgba(255, 160, 122, 1);
     border-width: 0px;
     border-radius: 0px;
@@ -71,134 +71,8 @@ body {
     vertical-align: middle;
 }
 
-@media only screen and (min-width:960px){
-    /* styles for browsers larger than 960px; */
-    #facebook {
-        display: none;
-    }
-    #follow{
-        display: none;
-    }
-    #twitter {
-        display: none;
-    }
-    #email {
-        display: none;
-    }
-    #menu{
-        display: none;
-    }
-}
-@media only screen and (min-width:1440px){
-    /* styles for browsers larger than 1440px; */
-    #facebook {
-        display: none;
-    }
-    #follow{
-        display: none;
-    }
-    #twitter {
-        display: none;
-    }
-    #email {
-        display: none;
-    }
-    #menu{
-        display: none;
-    }
-}
-@media only screen and (min-width:2000px){
-    /* for sumo sized (mac) screens */
-    #facebook {
-        display: none;
-    }
-    #follow{
-        display: none;
-    }
-    #twitter {
-        display: none;
-    }
-    #email {
-        display: none;
-    }
-    #menu{
-        display: none;
-    }
-}
-@media only screen and (max-device-width:480px){
-    /* styles for mobile browsers smaller than 480px; (iPhone) */
-    #facebook {
-        display: block;
-    }
-    #follow{
-        display: block;
-    }
-    #twitter {
-        display: block;
-    }
-    #email {
-        display: block;
-    }
-    #menu{
-        display: block;
-    }
-}
-@media only screen and (device-width:768px){
-    /* default iPad screens */
-    #facebook {
-        display: none;
-    }
-    #follow{
-        display: none;
-    }
-    #twitter {
-        display: none;
-    }
-    #email {
-        display: none;
-    }
-    #menu{
-        display: none;
-    }
-}
-/* different techniques for iPad screening */
-@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
-    /* For portrait layouts only */
-    #facebook {
-        display: block;
-    }
-    #follow{
-        display: block;
-    }
-    #twitter {
-        display: block;
-    }
-    #email {
-        display: block;
-    }
-    #menu{
-        display: block;
-    }
-}
 
-@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
-    /* For landscape layouts only */
-    #facebook {
-        display: none;
-    }
-    #follow{
-        display: none;
-    }
-    #twitter {
-        display: none;
-    }
-    #email {
-        display: none;
-    }
-    #menu {
-        display: none;
-    }
-}
+
 .hovereffect {
     width:100%;
     height:100%;
@@ -234,7 +108,7 @@ body {
     color:#fff;
     text-align:center;
     position:relative;
-    font-size:17px;
+    font-size:30px;
     background:rgba(0,0,0,0.6);
     -webkit-transform:translatey(-100px);
     -ms-transform:translatey(-100px);
@@ -242,7 +116,7 @@ body {
     -webkit-transition:all .2s ease-in-out;
     transition:all .2s ease-in-out;
     padding:10px;
-    margin-top: 5%;
+    /*margin-top: 5%;*/
 }
 
 .hovereffect a.info {
@@ -256,7 +130,7 @@ body {
     filter:alpha(opacity=0);
     -webkit-transition:all .2s ease-in-out;
     transition:all .2s ease-in-out;
-    margin:205px 0 0;
+    margin:25% 0 0;
     padding:7px 14px;
     font-size: 30px;
 }
@@ -362,4 +236,23 @@ body {
         padding-right: 1%;*/
     /*margin-left: 0.5%;*/
     /*margin-right: 0.5%;*/
+}
+
+.google-maps {
+    position: relative;
+    padding-bottom: 42%;
+    // This is the aspect ratio
+    height: 0;
+    overflow: hidden;
+}
+.google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+#about h1, #about h2, #about h3, #about h4, #about h5, #about h6, #about p, #about a {
+    font-size: 1.3em;
 }

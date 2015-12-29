@@ -1,11 +1,10 @@
 <!-- Page Content -->
 <div class="container">
-
     <!-- Page Heading -->
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Page Heading
-                <small>Secondary Text</small>
+            <h1 class="page-header">Unggah Gambar
+                <!--<small>Secondary Text</small>-->
             </h1>
         </div>
     </div>
@@ -15,7 +14,7 @@
     </form>
     <br>
     <div class="col-sm-offset-11">
-        <button onclick="document.location.reload(true)" class="btn btn-success" >Refresh</button>
+        <button onclick="document.location.reload(true)" class="btn btn-success siku" >Refresh</button>
     </div>
     <hr>
     <?php if (count($gambars) == 0): ?>
@@ -77,29 +76,4 @@
          /.row -->
 
     <hr>
-
-    <!-- Footer -->
-    <footer>
-        <div class="row">
-            <div class="col-lg-12">
-                <p>Copyright &copy; Your Website 2014</p>
-            </div>
-        </div>
-        <!-- /.row -->
-    </footer>
-
-</div>
 <!-- /.container -->
-
-<!-- jQuery -->
-<script src="<?php echo base_url(); ?>/backend/js/jquery.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="<?php echo base_url(); ?>/backend/js/bootstrap.min.js"></script>
-
-<link href="<?php echo base_url(); ?>/backend/css/dropzone.css" type="text/css" rel="stylesheet" />
-<script src="<?php echo base_url(); ?>/backend/js/dropzone.js"></script>
-
-</body>
-
-</html>
