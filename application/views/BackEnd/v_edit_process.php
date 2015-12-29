@@ -23,13 +23,13 @@
         <div class="form-group">
             <label class="col-sm-2 control-label">Judul</label>
             <div class="col-sm-10">
-                <input name="name" type="text" class="form-control" required placeholder="nama bangunan">
+                <input name="name" type="text" class="form-control" required value="<?php echo $process->judul ?>" placeholder="nama bangunan">
             </div>
         </div>
         <div class="form-group">
             <label class="col-sm-2 control-label">Deskripsi</label>
             <div class="col-sm-10">
-                <textarea name="description" class="form-control" required rows="3"></textarea>
+                <textarea name="description" class="form-control" required rows="3"><?php echo $process->deskripsi ?></textarea>
             </div>
         </div>        
         <div class="form-group">
@@ -38,54 +38,19 @@
             </div>
         </div>
     </form>
-    <hr>
-    <table class="table" id="datatable">
-        <thead>
-            <tr>
-                <th>Tanggal</th>
-                <th>Judul</th>
-                <th>Deskripsi</th>
-                <th>Gambar</th>
-                <th>Aksi</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php
-            foreach ($processes as $process):
-                $image_properties = array(
-                    'src' => 'uploads/' . $process->path,
-                    'alt' => '',
-                    'class' => 'post_images',
-                    'height' => '150',
-                    'title' => 'That was quite a night',
-                    'rel' => 'lightbox',
-                );
-                ?>
-                <tr>
-                    <td><?php echo date('d-m-Y', strtotime($process->tanggal)) ?></td>
-                    <td><?php echo $process->judul ?></td>
-                    <td><?php echo substr($process->deskripsi,0,200)."..." ?> </td>
-                    <td><?php echo img($image_properties); ?> </td>
-                    <!--<td><img scr="<?php echo base_url() . "uploads/" . $process->path ?>" alt=""/></td>-->
-                    <td>
-                        <a href="<?php echo base_url() ?>index.php/backend/edit_process/<?php echo $process->IDProcess ?>" class="btn btn-success">Edit</a>
-                        <a href="<?php echo base_url() ?>index.php/backend/delete_process/<?php echo $process->IDProcess ?>" onclick="return confirm('Anda yakin akan menghapus data ini ?')" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
-                    </td>
-                </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
-
-    <!--     Footer 
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
-                </div>
-            </div>
-             /.row 
-        </footer>-->
-
+    <div>
+        <?php
+        $image_properties = array(
+            'src' => 'uploads/' . $process->path,
+            'alt' => '',
+            'class' => 'post_images col-sm-offset-2',
+            'height' => '150',
+            'title' => 'That was quite a night',
+            'rel' => 'lightbox',
+        );
+        echo img($image_properties);
+        ?>
+    </div>
 </div>
 <!-- /.container -->
 
@@ -125,11 +90,4 @@
 
 </body>
 
-</html><?php
-
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
+</html>

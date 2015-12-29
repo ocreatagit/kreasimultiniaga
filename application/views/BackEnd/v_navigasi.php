@@ -1,3 +1,4 @@
+<?php if($page != 'login'): ?>
 <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
@@ -14,16 +15,16 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li>
+                    <li class="<?php $page == 'home' ? 'active' : "" ?>">
                         <a href="<?php echo base_url() ?>index.php/backend/home">Beranda</a>
                     </li>
-                    <li>
+                    <li class="<?php $page == 'project' ? 'active' : "" ?>">
                         <a href="<?php echo base_url() ?>index.php/backend/project">Proyek Kami</a>
                     </li>
-                    <li>
+                    <li class="<?php $page == 'process' ? 'active' : "" ?>">
                         <a href="<?php echo base_url() ?>index.php/backend/process">Proses Pengerjaan</a>
                     </li>
-                    <li>
+                    <li class="<?php $page == 'about_us' ? 'active' : "" ?>">
                         <a href="<?php echo base_url() ?>index.php/backend/about_us">Tentang Kami</a>
                     </li>
                 </ul>
@@ -32,3 +33,4 @@
         </div>
         <!-- /.container -->
     </nav>
+<?php endif; ?>

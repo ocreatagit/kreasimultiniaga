@@ -13,6 +13,7 @@
 
     <form action="<?php echo base_url(); ?>/index.php/backend/upload_project/<?php echo $IDProject ?>" class="dropzone"  >
     </form>
+    <br>
     <div class="col-sm-offset-11">
         <button onclick="document.location.reload(true)" class="btn btn-success" >Refresh</button>
     </div>

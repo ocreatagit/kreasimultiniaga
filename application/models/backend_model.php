@@ -65,7 +65,7 @@ class Backend_model extends CI_Model {
     function get_project_image($IDProject = FALSE, $IDGambar = FALSE) {
         if ($IDProject) {
             return $this->db->get_where('gambar', array('IDProject' => $IDProject))->result();
-        }else{
+        } else {
             return $this->db->get_where('gambar', array('IDGambar' => $IDGambar))->row();
         }
     }
@@ -79,17 +79,26 @@ class Backend_model extends CI_Model {
         $this->db->where('IDProjek', $IDProject);
         $this->db->update('project', $data);
     }
-    
-    function delete_project_image($IDGambar){
+
+    function delete_project_image($IDGambar) {
         $this->db->delete('gambar', array('IDGambar' => $IDGambar));
+    }
+
+    function delete_project($IDProject) {
+        $this->db->delete('project', array('IDProjek' => $IDProject));
+        $this->db->delete('gambar', array('IDProject' => $IDProject));
     }
 
     /* end-PROJECT */
 
     /* PROCESS */
 
-    function get_process() {
-        return $this->db->get('process')->result();
+    function get_process($IDProcess = FALSE) {
+        if ($IDProcess) {
+            return $this->db->get_where('process', array('IDProcess' => $IDProcess))->row();
+        } else {
+            return $this->db->get('process')->result();
+        }
     }
 
     function insert_process($fileName) {
@@ -101,5 +110,57 @@ class Backend_model extends CI_Model {
         $this->db->insert('process', $data);
     }
 
+    function delete_process($IDProcess) {
+        $this->db->delete('process', array('IDProcess' => $IDProcess));
+    }
+
+    function update_process($IDProcess, $fileName = FALSE) {
+        $data = array(
+            'judul' => $this->input->post('name'),
+            'deskripsi' => $this->input->post('description')
+        );
+        if ($fileName) {
+            $data['path'] = $fileName;
+        }
+        $this->db->where('IDProcess', $IDProcess);
+        $this->db->update('process', $data);
+    }
+
     /* end-PROCESS */
+
+    /* About Us */
+
+    function get_about_us() {
+        return $this->db->get('about_us')->result();
+    }
+
+    function update_about_us() {
+        $data = array(
+            'jabatan' => $this->input->post('jabatan'),
+            'phone' => $this->input->post('noHp'),
+            'email' => $this->input->post('email'),
+            'office' => $this->input->post('office')
+        );
+        if ($this->db->get('about_us')->num_rows() > 0) {
+            $this->db->update('about_us', $data);
+        }else{
+            $this->db->insert('about_us', $data);
+        }
+    }
+
+    /* end-About Us */
+    
+    /*login*/
+    function cek_username(){   
+        $username = $this->input->post('username');
+        return ($this->db->get_where('admin', array('username' => $username))->num_rows() > 0);
+    }
+    
+    function cek_password(){
+        $username = $this->input->post('username');
+        $password = $this->input->post('password');
+        $data = $this->db->get_where('admin', array('username' => $username))->row();
+        return $data->hash == hash('sha512', $username.$data->salt.$password) ;
+    }
+    /*end-login*/
 }

@@ -62,7 +62,7 @@
                 <td><?php echo substr($project->deskripsi,0,200)."..." ?> </td>                
                 <td>
                     <a href="<?php echo base_url() ?>index.php/backend/edit_project/<?php echo $project->IDProjek ?>" class="btn btn-success">Edit</a>
-                    <a href="<?php echo base_url() ?>index.php/backend/edit_project/<?php echo $project->IDProjek ?>" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
+                    <a href="<?php echo base_url() ?>index.php/backend/edit_project/<?php echo $project->IDProjek ?>" onclick="return confirm('Anda yakin akan menghapus data ini ?')" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
                 </td>
             </tr>
             <?php endforeach; ?>
