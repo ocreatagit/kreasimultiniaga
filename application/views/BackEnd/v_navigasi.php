@@ -1,3 +1,4 @@
+<?php if($page != 'login'): ?>
 <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
@@ -9,23 +10,31 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Kreasi Multi Niaga Admin</a>
+                <a class="navbar-brand" href="<?php echo base_url() ?>index.php/backend/home">Kreasi Multi Niaga</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li>
-                        <a href="<?php echo base_url() ?>index.php/backend">Unggah Slider</a>
+                    <li class="<?php $page == 'home' ? 'active' : "" ?>">
+                        <a href="<?php echo base_url() ?>index.php/backend/home">Beranda</a>
                     </li>
-                    <li>
+                    <li class="<?php $page == 'project' ? 'active' : "" ?>">
+                        <a href="<?php echo base_url() ?>index.php/backend/project">Proyek Kami</a>
+                    </li>
+                    <li class="<?php $page == 'process' ? 'active' : "" ?>">
+                        <a href="<?php echo base_url() ?>index.php/backend/process">Proses Pengerjaan</a>
+                    </li>
+                    <li class="<?php $page == 'about_us' ? 'active' : "" ?>">
+                        <a href="<?php echo base_url() ?>index.php/backend/about_us">Tentang Kami</a>
+                    </li>
+                    
+                    <li class="<?php $page == 'uang_kas' ? 'active' : "" ?>">
                         <a href="<?php echo base_url() ?>index.php/backend/uang_kas">Uang Kas</a>
                     </li>
-<!--                    <li>
-                        <a href="#">Contact</a>
-                    </li>-->
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
     </nav>
+<?php endif; ?>

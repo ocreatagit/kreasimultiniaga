@@ -15,29 +15,6 @@
 
             <div class="col-md-12" style="background-color: white; margin-bottom: 20px; padding-bottom: 20px; padding-top: 10px;">
                 <form class="form-horizontal" method="post" action="<?php echo current_url(); ?>">
-                    <?php if ($this->session->userdata('Level') == 0) {
-                        ?>
-                        <div class="form-group">
-                            <label for="exampleInputName2" class="control-label col-lg-2" style=""> Cabang : </label>
-                            <div class="col-lg-3">
-                                <select name="cabang" class="form-control siku">
-                                    <?php
-                                    foreach ($cabangs as $cabang) {
-                                        ?>
-                                        <option value="<?php echo $cabang->idcabang ?>" <?php if ($status_IDCabang == $cabang->idcabang) echo "selected"; ?>><?php echo $cabang->provinsi . " - " . $cabang->kabupaten ?></option>
-                                    <?php }
-                                    ?>
-                                </select>
-                            </div>
-                            <div class="col-lg-3">
-                                <select name="jenis" class="form-control siku">
-                                    <option value="1" <?php if ($status_jenis == 1) echo "selected"; ?>>Admin Lapangan</option>
-                                    <option value="2" <?php if ($status_jenis == 2) echo "selected"; ?>>Admin Kantor</option>
-                                </select>
-                            </div>
-                        </div>
-                    <?php }
-                    ?>
                     <div class="form-group">
                         <label for="exampleInputName2" class="control-label col-lg-2" style="">Periode :</label>
                         <div class="col-lg-2">

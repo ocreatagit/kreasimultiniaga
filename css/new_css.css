@@ -7,6 +7,7 @@ and open the template in the editor.
     Created on : Dec 24, 2015, 9:40:15 PM
     Author     : Willem-Grace
 */
+/*
 
 #custom-bootstrap-menu.navbar-default .navbar-brand {
     color: rgba(255, 255, 255, 1);
@@ -40,20 +41,33 @@ and open the template in the editor.
     background-color: #ffffff;
 }
 #custom-bootstrap-menu.navbar-default .navbar-toggle .icon-bar {
-    /*    background-color: #ffffff;*/
     background-color: #F1592A;
 }
 #custom-bootstrap-menu.navbar-default .navbar-toggle:hover .icon-bar,
 #custom-bootstrap-menu.navbar-default .navbar-toggle:focus .icon-bar {
     background-color: #ffa07a;
-
 }
 
-body {
-    font-family: "Oswald", "San Serif";
-    font-weight: 700;
+*/
+
+.navbar.transparent.navbar-inverse .navbar-inner {
+   background: rgba(0,0,0,0.4);
 }
 
+ul li a {
+   color: black;
+}
+
+.noWell{
+    border-style: none;
+    border-radius: 0px;
+}
+
+
+#navbar div {
+    height: 100%;
+    vertical-align: middle;
+}
 .nopaddingmargin {
     padding: 0px;
     margin: 0px;
@@ -232,8 +246,8 @@ body {
 }
 
 .denah_pics {
-/*        padding-left: 1%;
-        padding-right: 1%;*/
+    /*        padding-left: 1%;
+            padding-right: 1%;*/
     /*margin-left: 0.5%;*/
     /*margin-right: 0.5%;*/
 }

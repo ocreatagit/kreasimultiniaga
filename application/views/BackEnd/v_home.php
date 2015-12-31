@@ -5,12 +5,14 @@
         <div class="col-lg-12">
             <h1 class="page-header">Unggah Gambar
                 <!--<small>Secondary Text</small>-->
+            <h1 class="page-header">Beranda
+                <small>Slider</small>
             </h1>
         </div>
     </div>
     <!-- /.row -->
 
-    <form action="<?php echo base_url(); ?>/index.php/backend/upload" class="dropzone"  >
+    <form action="<?php echo base_url(); ?>/index.php/backend/upload_home" class="dropzone"  >
     </form>
     <br>
     <div class="col-sm-offset-11">
@@ -75,5 +77,35 @@
         </div>
          /.row -->
 
+<<<<<<< HEAD
     <hr>
 <!-- /.container -->
+=======
+<!--    <hr>
+
+     Footer 
+    <footer>
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Copyright &copy; Your Website 2014</p>
+            </div>
+        </div>
+         /.row 
+    </footer>-->
+
+</div>
+<!-- /.container -->
+
+<!-- jQuery -->
+<script src="<?php echo base_url(); ?>/backend/js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="<?php echo base_url(); ?>/backend/js/bootstrap.min.js"></script>
+
+<link href="<?php echo base_url(); ?>/backend/css/dropzone.css" type="text/css" rel="stylesheet" />
+<script src="<?php echo base_url(); ?>/backend/js/dropzone.js"></script>
+
+</body>
+
+</html>
+>>>>>>> 55871a4a3f923423884a7da16662779c92cb4b88

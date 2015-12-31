@@ -10,6 +10,8 @@ class Backend_model extends CI_Model {
         $this->load->helper('date');
     }
 
+    /* HOME */
+
     function insert_image_slider($filename) {
         $this->db->insert('slider_home', array('path' => $filename));
     }
@@ -28,14 +30,14 @@ class Backend_model extends CI_Model {
     }
 
     function insert_laporan_saldo_kas() {
-        foreach ($this->cart->contents() as $items){
-            if($items["options"]["jenis"] == 0){
+        foreach ($this->cart->contents() as $items) {
+            if ($items["options"]["jenis"] == 0) {
                 $total += ($items["price"] + 0);
             } else {
                 $total -= ($items["price"] + 0);
             }
         }
-        
+
         $data = array(
             'tanggal' => date('Y-m-d'),
             'total' => $total
@@ -55,7 +57,7 @@ class Backend_model extends CI_Model {
         );
         $this->db->insert('detail_laporan_saldo', $data);
     }
-    
+
     function insert_jurnal_saldo($noBukti, $jenis_transaksi, $tanggal_transaksi, $nilai_transaksi, $keterangan, $saldo = true) {
         $SQL = "SELECT * FROM transaksi WHERE keterangan = '$jenis_transaksi';";
         $transaksi = $this->db->query($SQL)->row();
@@ -90,23 +92,160 @@ class Backend_model extends CI_Model {
             // SALDO END HERE
         }
     }
-    
-    function select_laporan_saldo($awal = FALSE, $akhir = FALSE){
+
+    function select_laporan_saldo($awal = FALSE, $akhir = FALSE) {
         $sql = "SELECT j.IDJurnal, j.keterangan, j.keterangan, j.tanggal, j.sifat, (CASE WHEN j.sifat = 'D' THEN j.nilai_jurnal ELSE 0 END) as kasmasuk, (CASE WHEN j.sifat = 'K' THEN j.nilai_jurnal ELSE 0 END) as kaskeluar
                 FROM jurnal j 
                 " . ($awal && $akhir ? "WHERE DATE(j.tanggal) >= '" . strftime("%Y-%m-%d", strtotime($awal)) . "' AND DATE(j.tanggal) <= '" . strftime("%Y-%m-%d", strtotime($akhir)) . "'" : "") . "
                 GROUP BY j.IDJurnal ORDER BY j.tanggal ASC;";
 //        echo $sql; exit;
-        
+
         return $this->db->query($sql)->result();
     }
-    
-    function select_laporan_pindahan($awal = FALSE, $akhir = FALSE){
+
+    function select_laporan_pindahan($awal = FALSE, $akhir = FALSE) {
         $sql = "SELECT j.IDJurnal, j.keterangan, j.keterangan, j.tanggal, j.sifat, (CASE WHEN j.sifat = 'D' THEN j.nilai_jurnal ELSE 0 END) as kasmasuk, (CASE WHEN j.sifat = 'K' THEN j.nilai_jurnal ELSE 0 END) as kaskeluar
                 FROM jurnal j 
-                " . ($awal ? "WHERE DATE(j.tanggal) <= '" . strftime("%Y-%m-%d", strtotime($awal))."'" : "") . "
+                " . ($awal ? "WHERE DATE(j.tanggal) <= '" . strftime("%Y-%m-%d", strtotime($awal)) . "'" : "") . "
                 GROUP BY j.IDJurnal ORDER BY j.tanggal ASC;";
 //        echo $sql; exit;        
         return $this->db->query($sql)->result();
     }
+
+    /* end-HOME */
+
+    /* PROJECT */
+
+    function insert_image_project($filename, $IDProject = FALSE) {
+        if (!$IDProject) {
+            $sql = "SELECT AUTO_INCREMENT as IDProject FROM information_schema.tables WHERE TABLE_SCHEMA = 'kreasimultiniaga' AND TABLE_NAME = 'project'";
+            $IDProject = $this->db->query($sql)->row()->IDProject;
+        }
+        $data = array(
+            'IDProject' => $IDProject,
+            'path' => $filename
+        );
+        $this->db->insert('gambar', $data);
+    }
+
+    function insert_project() {
+        $data = array(
+            'tipe' => $this->input->post('type'),
+            'judul' => $this->input->post('name'),
+            'deskripsi' => $this->input->post('description')
+        );
+        $this->db->insert('project', $data);
+    }
+
+    function get_project($IDProject = FALSE) {
+        if ($IDProject) {
+            return $this->db->get_where('project', array('IDProjek' => $IDProject))->row();
+        } else {
+            return $this->db->get('project')->result();
+        }
+    }
+
+    function get_project_image($IDProject = FALSE, $IDGambar = FALSE) {
+        if ($IDProject) {
+            return $this->db->get_where('gambar', array('IDProject' => $IDProject))->result();
+        } else {
+            return $this->db->get_where('gambar', array('IDGambar' => $IDGambar))->row();
+        }
+    }
+
+    function update_project($IDProject) {
+        $data = array(
+            'tipe' => $this->input->post('type'),
+            'judul' => $this->input->post('name'),
+            'deskripsi' => $this->input->post('description')
+        );
+        $this->db->where('IDProjek', $IDProject);
+        $this->db->update('project', $data);
+    }
+
+    function delete_project_image($IDGambar) {
+        $this->db->delete('gambar', array('IDGambar' => $IDGambar));
+    }
+
+    function delete_project($IDProject) {
+        $this->db->delete('project', array('IDProjek' => $IDProject));
+        $this->db->delete('gambar', array('IDProject' => $IDProject));
+    }
+
+    /* end-PROJECT */
+
+    /* PROCESS */
+
+    function get_process($IDProcess = FALSE) {
+        if ($IDProcess) {
+            return $this->db->get_where('process', array('IDProcess' => $IDProcess))->row();
+        } else {
+            return $this->db->get('process')->result();
+        }
+    }
+
+    function insert_process($fileName) {
+        $data = array(
+            'path' => $fileName,
+            'judul' => $this->input->post('name'),
+            'deskripsi' => $this->input->post('description')
+        );
+        $this->db->insert('process', $data);
+    }
+
+    function delete_process($IDProcess) {
+        $this->db->delete('process', array('IDProcess' => $IDProcess));
+    }
+
+    function update_process($IDProcess, $fileName = FALSE) {
+        $data = array(
+            'judul' => $this->input->post('name'),
+            'deskripsi' => $this->input->post('description')
+        );
+        if ($fileName) {
+            $data['path'] = $fileName;
+        }
+        $this->db->where('IDProcess', $IDProcess);
+        $this->db->update('process', $data);
+    }
+
+    /* end-PROCESS */
+
+    /* About Us */
+
+    function get_about_us() {
+        return $this->db->get('about_us')->result();
+    }
+
+    function update_about_us() {
+        $data = array(
+            'jabatan' => $this->input->post('jabatan'),
+            'phone' => $this->input->post('noHp'),
+            'email' => $this->input->post('email'),
+            'office' => $this->input->post('office')
+        );
+        if ($this->db->get('about_us')->num_rows() > 0) {
+            $this->db->update('about_us', $data);
+        } else {
+            $this->db->insert('about_us', $data);
+        }
+    }
+
+    /* end-About Us */
+
+    /* login */
+
+    function cek_username() {
+        $username = $this->input->post('username');
+        return ($this->db->get_where('admin', array('username' => $username))->num_rows() > 0);
+    }
+
+    function cek_password() {
+        $username = $this->input->post('username');
+        $password = $this->input->post('password');
+        $data = $this->db->get_where('admin', array('username' => $username))->row();
+        return $data->hash == hash('sha512', $username . $data->salt . $password);
+    }
+
+    /* end-login */
 }
