@@ -11,8 +11,11 @@ class Welcome extends CI_Controller {
         $data['title'] = 'KREASI MULTI NIAGA';
         $data['navbar'] = 'beranda';
         
+        $this->load->model("Backend_model");
+        
+        $data["image_slider"] = $this->Backend_model->get_image_slider();
         $this->load->view('FrontEnd/v_head', $data);
-        $this->load->view('FrontEnd/v_main');
+        $this->load->view('FrontEnd/v_main', $data);
         $this->load->view('FrontEnd/v_foot');
     }
 

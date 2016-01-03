@@ -1,9 +1,10 @@
 <!-- Page Content -->
 <div class="container">
-
     <!-- Page Heading -->
     <div class="row">
         <div class="col-lg-12">
+            <h1 class="page-header">Unggah Gambar
+                <!--<small>Secondary Text</small>-->
             <h1 class="page-header">Beranda
                 <small>Slider</small>
             </h1>
@@ -15,7 +16,7 @@
     </form>
     <br>
     <div class="col-sm-offset-11">
-        <button onclick="document.location.reload(true)" class="btn btn-success" >Refresh</button>
+        <button onclick="document.location.reload(true)" class="btn btn-success siku" >Refresh</button>
     </div>
     <hr>
     <?php if (count($gambars) == 0): ?>
@@ -76,6 +77,7 @@
         </div>
          /.row -->
 
+<!-- /.container -->
 <!--    <hr>
 
      Footer 

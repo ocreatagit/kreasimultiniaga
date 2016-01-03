@@ -56,7 +56,7 @@
         <tbody>
             <?php foreach ($projects as $project): ?>
             <tr>
-                <td><?php echo date( 'd-m-Y', strtotime( $project->tanggal)) ?></td>
+                <td><?php echo date('d-m-Y', strtotime($project->tanggal)) ?></td>
                 <td><?php echo $project->tipe ?></td>
                 <td><?php echo $project->judul ?> </td>
                 <td><?php echo substr($project->deskripsi,0,200)."..." ?> </td>                

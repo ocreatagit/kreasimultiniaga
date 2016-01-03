@@ -57,23 +57,67 @@
         <span class="nav-arrow-next">Next</span>
     </nav>
 </div>-->
-
-<div id="innerHome">
+<!--
+<div id="innerHome" class="container" style="">
     <ul id="slippry">
-        <li>
-            <a href="#slide1"><img src="<?php echo base_url() ?>images/1.jpg" alt=""></a>
-        </li>
-        <li>
-            <a href="#slide2"><img src="<?php echo base_url() ?>images/2.jpg" alt=""></a>
-        </li>
-        <li>
-            <a href="#slide3"><img src="<?php echo base_url() ?>images/3.jpg" alt=""></a>
-        </li>
-        <li>
-            <a href="#slide4"><img src="<?php echo base_url() ?>images/4.jpg" alt=""></a>
-        </li>
-        <li>
-            <a href="#slide5"><img src="<?php echo base_url() ?>images/5.jpg" alt=""></a>
-        </li>
+<?php /*
+  $count = 1;
+  foreach ($image_slider as $image) {
+  ?>
+  <li>
+  <a href="#slide<?php echo $count ?>"><img src="<?php echo base_url() ?>uploads/<?php echo $image->path ?>" ></a>
+  </li>
+  <?php
+  $count++;
+  } */ ?>
     </ul>
+</div>
+
+-->
+<div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1300px; height: 700px; overflow: hidden; visibility: hidden;">
+    <!-- Loading Screen -->
+    <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+        <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+        <div style="position:absolute;display:block;background:url('<?php echo base_url() ?>jssor/img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+    </div>
+    <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1300px; height: 700px; overflow: hidden;">
+        <?php
+        $count = 1;
+        foreach ($image_slider as $image) {
+            ?>
+            <div data-p="225.00" style="display: none;">
+                <img data-u="image" src="<?php echo base_url() ?>uploads/<?php echo $image->path ?>" style="height: 100%; width: 100%;"/>
+            </div>
+            <?php
+            $count++;
+        }
+        ?>
+    </div>
+    <!-- Bullet Navigator -->
+    <div data-u="navigator" class="jssorb05" style="bottom:16px;right:16px;" data-autocenter="1">
+        <!-- bullet navigator item prototype -->
+        <div data-u="prototype" style="width:16px;height:16px;"></div>
+    </div>
+    <!-- Arrow Navigator -->
+    <span data-u="arrowleft" class="jssora22l" style="top:0px;left:12px;width:40px;height:58px;" data-autocenter="2"></span>
+    <span data-u="arrowright" class="jssora22r" style="top:0px;right:12px;width:40px;height:58px;" data-autocenter="2"></span>
+    <a href="http://www.jssor.com" style="display:none">Bootstrap Carousel</a>
+</div>
+<div id="tentangKami" style="background-color: #EAF2F5; padding: 2%;">
+    <div class="row">
+        <div class="col-lg-6" style="margin-bottom: 3%;" id="about">
+<!--            <h1 style="border-bottom: black solid 1px; padding-bottom: 1%;">KREASI MULTI NIAGA</h1>  
+            <h3 style="margin-top: 1%; color: orangered;">Kontraktor Bangunan</h3><br>-->
+            <h2 style="margin-bottom: 1%;">John Sulayman</h2>
+            <h4 style="color: orangered; ">Marketing Manager - 087860383940</h4><br>
+
+            <h2>OFFICE :</h2>
+            <h3 style="color: orangered; margin-top: 1%;">Alamat : Manyar Kertoadi XII / W 258<br>Surabaya-Indonesia<br>Telp : (031)5961872</h3><br>
+            <h2>Email :</h2>
+            <h3 style="color: orangered; margin-top: 1%;">kreasimultiniaga@gmail.com</h3>
+        </div>
+        <div class="col-lg-6 text-center google-maps">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.5958959606814!2d112.78186351437122!3d-7.286733673639072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fa40f087cdb1%3A0xdf99b5f3b4dc89be!2sJl.+Manyar+Kertoadi+XII%2C+Sukolilo%2C+Kota+SBY%2C+Jawa+Timur+60117!5e0!3m2!1sid!2sid!4v1451122566919" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+    </div>
 </div>
