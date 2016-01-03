@@ -27,6 +27,9 @@
                     <li class="<?php $page == 'about_us' ? 'active' : "" ?>">
                         <a href="<?php echo base_url() ?>index.php/backend/about_us">Tentang Kami</a>
                     </li>
+                    <li>
+                        <a href="<?php echo base_url() ?>index.php/backend/logout">Logout</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
