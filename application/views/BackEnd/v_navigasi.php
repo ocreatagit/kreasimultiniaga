@@ -27,9 +27,11 @@
                     <li class="<?php $page == 'about_us' ? 'active' : "" ?>">
                         <a href="<?php echo base_url() ?>index.php/backend/about_us">Tentang Kami</a>
                     </li>
-                    
                     <li class="<?php $page == 'uang_kas' ? 'active' : "" ?>">
                         <a href="<?php echo base_url() ?>index.php/backend/uang_kas">Uang Kas</a>
+                    </li>
+                    <li class="<?php $page == 'lupa bagus good' ? 'active' : "" ?>">
+                        <a href="<?php echo base_url() ?>index.php/backend/ubah_password">Ganti Password</a>
                     </li>
                     <li>
                         <a href="<?php echo base_url() ?>index.php/backend/logout">Logout</a>

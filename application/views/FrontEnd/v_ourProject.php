@@ -43,7 +43,7 @@
                 <img class="img-responsive" src="<?php echo base_url() ?>images/gudang.jpg" alt="">
                 <div class="overlay">
                     <h2>Gudang</h2>
-                    <a class="info" href="<?php echo base_url() ?>index.php/welcome/ruko">Detail</a>
+                    <a class="info" href="<?php echo base_url() ?>index.php/welcome/gudang">Detail</a>
                 </div>
             </div>
         </div>

@@ -27,7 +27,7 @@
         <div class="form-group">
             <label class="col-sm-2 control-label">Office</label>
             <div class="col-sm-10">
-                <textarea name="office" class="form-control" rows="3"><?php echo count($about_us) > 0 ? $about_us[0]->office : "" ?></textarea>
+                <textarea name="office" class="form-control" rows="3"><?php echo count($about_us) > 0 ? str_replace("<br />", "", $about_us[0]->office) : "" ?></textarea>
             </div>
         </div>       
         <div class="form-group">

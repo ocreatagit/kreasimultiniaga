@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="<?php echo base_url() ?>images/favicon.ico">
         <title><?php echo $title ?></title>
         <link href="<?php echo base_url() ?>css/bootstrap.min.css" rel="stylesheet">
         <link href="<?php echo base_url() ?>css/logo-nav.css" rel="stylesheet">
@@ -14,8 +15,10 @@
 
         <link href="<?php echo base_url() ?>lightslider/css/lightslider.min.css" rel="stylesheet">
         <link href="<?php echo base_url() ?>lightbox/css/lightbox.css" rel="stylesheet">
+        
+        <link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>flatimeline/css/jquery.flatimeline.css" />
 
-        <script src="<?php echo base_url() ?>horizontal-timeline-master/js/modernizr.js"></script> <!-- Modernizr -->
+        <!--<script src="<?php echo base_url() ?>horizontal-timeline-master/js/modernizr.js"></script>  Modernizr -->
         <style>
 
             body {
@@ -75,152 +78,40 @@
         </style>
     </head>
     <body>
+        <!--<img src="<?php echo base_url() ?>images/new_1.png" style="position: fixed;"/>-->
         <div class="container">
-            <!--        <div class="container-fluid" style="">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <a class="" id="logo" href="#">
-                                    <img src="<?php echo base_url() ?>img/logo_fix.png" alt="" style="" width="350" height="65">
-                                </a>                    
-                            </div>
-            
+            <div class="navbar transparent" style="margin-bottom: 1%; border-bottom: #F1592A solid 4px;">
+                <nav class="navbar-inner">
+                    <div class="container-fluid">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <a href="" style="position: absolute;" id="logo-nav">
+                            <img src="<?php echo base_url() ?>images/logo.png" style=""/>
+                        </a>
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed siku" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" style="background: white; border: #F1592A solid 1px;">
+                                <big><i class="glyphicon glyphicon-list"></i></big>
+                            </button>
+                            <a class="navbar-brand brand-class" href="#" id="brand_new" style=''> Kreasi Multi Niaga</a>
                         </div>
-                    </div>-->
-            <!--
-            <nav class="navbar navbar-default" id="custom-bootstrap-menu" role="navigation" style="margin-bottom: 0px;">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                    </div>
-                    <div class="collapse navbar-collapse navbar-menubuilder" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav navbar-left">
-                            <li <?php echo $navbar == 'beranda' ? "class='active'" : "" ?>><a href="<?php echo base_url() ?>index.php/Welcome">Beranda</a>
-                            </li>
-                            <li <?php echo $navbar == 'ourProject' ? "class='active'" : "" ?>><a href="<?php echo base_url() ?>index.php/Welcome/ourProject">Proyek Kami</a>
-                            </li>
-                            <li <?php echo $navbar == 'proses' ? "class='active'" : "" ?>><a href="<?php echo base_url() ?>index.php/Welcome/proses">Proses Pengerjaan</a>
-                            </li>
-                            <li <?php echo $navbar == 'kontakkami' ? "class='active'" : "" ?>><a href="<?php echo base_url() ?>index.php/Welcome/kontakKami">Tentang Kami</a>
-                            </li>
-                        </ul>
-    
-                        <ul class="nav navbar-nav navbar-right">
-                            <li>
-                                <a href=""><span id="facebook"> <i class="fa fa-facebook-official"></i> 
-                                    Facebook</span>
-                                </a>
-                            </li>                        
-                            <li>
-                                <a href="">
-                                    <span id="twitter">
-                                    <i class="fa fa-twitter-square"></i> 
-                                    Twitter</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href=""><span id="email"><i class="fa fa-envelope-square"></i> 
-                                    Email</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            -->
 
-            <!--        <nav class="row" id="navbar">
-                        <div class="col-lg-2 text-center">
-                            <img src="<?php echo base_url() ?>images/logo.png"/>
-                        </div>
-                        <div class="col-lg-2 text-center">
-                            Beranda
-                        </div>
-                        <div class="col-lg-2 text-center">
-                            Proyek Kami
-                        </div>
-                        <div class="col-lg-2 text-center">
-                            Proses Pengerjaan
-                        </div>
-                        <div class="col-lg-2 text-center">
-                            Hubungi Kami
-                        </div>
-                        <div class="col-lg-2">
-                            KREASI MULTI NIAGA<br>
-                            KONTRAKTOR BANGUNAN
-                        </div>
-                    </nav>-->
-
-            <div class="navbar transparent" style="">
-                <nav class="navbar-inner" style="">
-                    <div style="display: table; height: 50px; overflow: hidden; border-bottom: #F05A28 solid 6px; width: 100%;">
-                        <div style="display: table-cell; vertical-align: bottom;">
-                            <div>
-                                <img src="<?php echo base_url() ?>images/logo.png"/>
-                            </div>
-                        </div>
-                        <div style="display: table-cell; vertical-align: bottom;" class="well noWell">
-                            <div class="" style="border-right: #F05A28 solid 3px; padding-top: 10%; margin-bottom: -30%; padding-bottom: 20%;">
-                                Beranda
-                            </div>
-                        </div>
-                        <div style="display: table-cell; vertical-align: bottom;" class="well noWell">
-                            <div class="" style="border-right: #F05A28 solid 3px; padding-top: 10%; margin-bottom: -30%; padding-bottom: 20%;">
-                                Proyek Kami
-                            </div>
-                        </div>
-                        <div style="display: table-cell; vertical-align: bottom;" class="well noWell">
-                            <div class="" style="border-right: #F05A28 solid 3px; padding-top: 10%; margin-bottom: -30%; padding-bottom: 20%;">
-                                Proyek Pengerjaan
-                            </div>
-                        </div>
-                        <div style="display: table-cell; vertical-align: bottom;" class="well noWell">
-                            <div class="" style="border-right: #F05A28 solid 3px; padding-top: 10%; margin-bottom: -30%; padding-bottom: 20%;">
-                                Hubungi Kami
-                            </div>
-                        </div>
-                        <div style="display: table-cell; vertical-align: bottom;" class="well text-center noWell">
-                            <div class="">
-                                <font style="font-size: 1.2em; font-weight: bold">KREASI MULTI NIAGA</font><br>
-                                <font style="font-size: 0.85em; color: #F05A28;"> Kontraktor Bangunan </font>
-                            </div>
-                        </div>
-                    </div>
-                    <!--                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                                                <span class="sr-only">Toggle navigation</span>
-                                                <span class="icon-bar"></span>
-                                                <span class="icon-bar"></span>
-                                                <span class="icon-bar"></span>
-                                            </button>-->
-<!--                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                    </div>
-                    <div class="collapse navbar-collapse navbar-menubuilder" id="bs-example-navbar-collapse-1">
-
-                        <ul class="nav navbar-nav navbar-left">
-                            <li>
-                                <a href="">
-                                    <img src="<?php echo base_url() ?>images/logo.png"/>
-                                </a>
-                            </li>
-                            <li <?php echo $navbar == 'beranda' ? "class='active'" : "" ?> style="vertical-align: bottom; height: 100%;"><a href="<?php echo base_url() ?>index.php/Welcome">Beranda</a>
-                            </li>
-                            <li <?php echo $navbar == 'ourProject' ? "class='active'" : "" ?>><a href="<?php echo base_url() ?>index.php/Welcome/ourProject">Proyek Kami</a>
-                            </li>
-                            <li <?php echo $navbar == 'proses' ? "class='active'" : "" ?>><a href="<?php echo base_url() ?>index.php/Welcome/proses">Proses Pengerjaan</a>
-                            </li>
-                            <li <?php echo $navbar == 'kontakkami' ? "class='active'" : "" ?>><a href="<?php echo base_url() ?>index.php/Welcome/kontakKami">Tentang Kami</a>
-                            </li>
-                        </ul>
-                    </div>-->
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse margin_resize" id="bs-example-navbar-collapse-1" style="">
+                            <ul class="nav navbar-nav" style="" id="navbar_content">
+                                <li class="<?php echo $navbar == 'beranda' ? "active" : "" ?> half-a-border-on-right" style="vertical-align: bottom; height: 100%;"><a href="<?php echo base_url() ?>index.php/Welcome">Beranda</a>
+                                </li>
+                                <li class="<?php echo $navbar == 'ourProject' ? "active" : "" ?> half-a-border-on-right"><a href="<?php echo base_url() ?>index.php/Welcome/ourProject">Proyek Kami</a>
+                                </li>
+                                <li class="<?php echo $navbar == 'proses' ? "active" : "" ?> half-a-border-on-right"><a href="<?php echo base_url() ?>index.php/Welcome/proses">Proses Pengerjaan</a>
+                                </li>
+                                <li id="nav_last" class="<?php echo $navbar == 'kontakkami' ? "active" : "" ?>"><a href="<?php echo base_url() ?>index.php/Welcome/kontakKami">Tentang Kami</a>
+                                </li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <h2 id="img_right"><font style="font-size: 1.7em; color: #F1592A;">KREASI MULTI NIAGA</font><br>
+                                    <span style="margin-left: 20%;">Kontraktor Bangunan</span>
+                                </h2>
+                            </ul>
+                        </div><!-- /.navbar-collapse -->
+                    </div><!-- /.container-fluid -->
                 </nav>
             </div>

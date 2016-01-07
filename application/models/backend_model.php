@@ -142,12 +142,20 @@ class Backend_model extends CI_Model {
         $this->db->insert('project', $data);
     }
 
-    function get_project($IDProject = FALSE) {
-        if ($IDProject) {
-            return $this->db->get_where('project', array('IDProjek' => $IDProject))->row();
-        } else {
-            return $this->db->get('project')->result();
+    function get_project($IDProject = FALSE, $Tipe = FALSE) {
+        if ($Tipe) {
+            $this->db->where("tipe", $Tipe);
         }
+        if ($IDProject) {
+            $this->db->where("IDProjek", $IDProject);
+        }
+        $res = $this->db->get('project');
+        return $res->result();
+    }
+
+    function get_new_project($tipe) {
+        $SQL = "SELECT * FROM project WHERE tipe = '$tipe' ORDER BY IDProjek DESC LIMIT 0, 1";
+        return $this->db->query($SQL)->row();
     }
 
     function get_project_image($IDProject = FALSE, $IDGambar = FALSE) {
@@ -182,11 +190,17 @@ class Backend_model extends CI_Model {
     /* PROCESS */
 
     function get_process($IDProcess = FALSE) {
+        $this->db->order_by("tanggal", 'ASC');
         if ($IDProcess) {
             return $this->db->get_where('process', array('IDProcess' => $IDProcess))->row();
         } else {
             return $this->db->get('process')->result();
         }
+    }
+
+    function get_last_process_month() {
+        $SQL = "SELECT * FROM process  WHERE MONTH(tanggal) = ".  date("m"). " ORDER BY tanggal DESC";
+        return $this->db->query($SQL)->row();
     }
 
     function insert_process($fileName) {
@@ -227,7 +241,7 @@ class Backend_model extends CI_Model {
             'jabatan' => $this->input->post('jabatan'),
             'phone' => $this->input->post('noHp'),
             'email' => $this->input->post('email'),
-            'office' => $this->input->post('office')
+            'office' => nl2br($this->input->post('office'))
         );
         if ($this->db->get('about_us')->num_rows() > 0) {
             $this->db->update('about_us', $data);

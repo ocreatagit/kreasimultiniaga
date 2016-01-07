@@ -50,19 +50,18 @@ and open the template in the editor.
 
 */
 
-.navbar.transparent.navbar-inverse .navbar-inner {
-   background: rgba(0,0,0,0.4);
-}
+/*.navbar.transparent.navbar-inverse .navbar-inner  #bs-example-navbar-collapse-1 {
+    background: rgba(0,0,0,0.4);
+}*/
 
 ul li a {
-   color: black;
+    color: black;
 }
 
 .noWell{
     border-style: none;
     border-radius: 0px;
 }
-
 
 #navbar div {
     height: 100%;
@@ -84,8 +83,6 @@ ul li a {
     background-color: rgba(255, 160, 122, 1);
     vertical-align: middle;
 }
-
-
 
 .hovereffect {
     width:100%;
@@ -270,3 +267,265 @@ ul li a {
 #about h1, #about h2, #about h3, #about h4, #about h5, #about h6, #about p, #about a {
     font-size: 1.3em;
 }
+
+#navbar_content li a {
+    font-size: 1.3em;
+}
+
+.proyek_header {
+    border-bottom: #fff solid 2px;
+}
+
+.proyek_detail {
+    padding-top: 10px;
+}
+
+.active {
+    background-color: lightgray;
+}
+
+// Media
+
+@media all and (max-width : 3000px) and (min-width: 1680px) {
+    #logo-nav {
+        position: absolute;
+        display: block;
+    }
+    #brand_new {
+        display: none;
+    }
+
+    #navbar_content {
+        margin-left: 14%;
+    }
+
+    .half-a-border-on-right {
+        border-right: #F1592A solid 3px;
+        position: relative;
+    }
+    .half-a-border-on-right:after {
+        padding:0;margin:0;display:block;/* not really needed */
+        content: "";
+        width:50%;
+        /*height:1px;*/
+        height: 50%;
+        background-color:transparent;
+        position: absolute;
+        right:0;
+        top:-1px;
+    }
+
+    .margin_resize {
+        margin-top: 3.5%;
+    }
+
+    .brand-class {
+        color: #F1592A;
+        font-size: 1.5em;
+        padding-top: 3%;
+    }
+}
+
+@media all and (max-width: 2000px) and (min-width: 1200px) {
+    #logo-nav {
+        position: absolute;
+        display: block;
+    }
+    #brand_new {
+        display: none;
+    }
+
+    #navbar_content {
+        margin-left: 17%;
+        /*background-color: red;*/
+    }
+
+    .half-a-border-on-right {
+        border-right: #F1592A solid 3px;
+        position: relative;
+    }
+    .half-a-border-on-right:after {
+        padding:0;margin:0;display:block;/* not really needed */
+        content: "";
+        width:50%;
+        /*height:1px;*/
+        height: 50%;
+        background-color:transparent;
+        position: absolute;
+        right:0;
+        top:-1px;
+    }
+
+    .margin_resize {
+        margin-top: 3.5%;
+    }
+
+    #img_right {
+        display: block;
+    }
+
+    #navbar_content li a {
+        font-size: 1.3em;
+    }
+
+    .brand-class {
+        color: #F1592A;
+        font-size: 1.4em;
+        padding-top: 3%;
+    }
+}
+
+@media all and (max-width: 1200px) and (min-width: 1000px) {
+    #logo-nav {
+        position: absolute;
+        display: block;
+    }
+
+    #logo-nav img {
+        height: 90%;
+        width: 90%;
+    }
+
+    #brand_new {
+        display: none;
+    }
+
+    #navbar_content {
+        margin-left: 17%;
+        /*background-color: yellow;*/
+    }
+
+    .half-a-border-on-right {
+        border-right: #F1592A solid 3px;
+        position: relative;
+    }
+    .half-a-border-on-right:after {
+        padding:0;margin:0;display:block;/* not really needed */
+        content: "";
+        width:50%;
+        /*height:1px;*/
+        height: 50%;
+        background-color:transparent;
+        position: absolute;
+        right:0;
+        top:-1px;
+    }
+
+    .margin_resize {
+        margin-top: 3.5%;
+    }
+
+    #img_right {
+        display: block;
+    }
+
+    #navbar_content li a {
+        font-size: 1em;
+    }
+    
+    .brand-class {
+        color: #F1592A;
+        font-size: 1.35em;
+        padding-top: 3%;
+    }
+}
+
+@media all and (max-width: 1000px) and (min-width: 760px) {
+    #logo-nav {
+        position: absolute;
+        display: block;
+    }
+
+    #logo-nav img {
+        height: 80%;
+        width: 80%;
+    }
+
+    #brand_new {
+        display: none;
+    }
+
+    #navbar_content {
+        margin-left: 12%;
+        /*background-color: green;*/
+    }
+
+    .half-a-border-on-right {
+        border-right: #F1592A solid 3px;
+        position: relative;
+    }
+    .half-a-border-on-right:after {
+        padding:0;margin:0;display:block;/* not really needed */
+        content: "";
+        width:50%;
+        /*height:1px;*/
+        height: 50%;
+        background-color:transparent;
+        position: absolute;
+        right:0;
+        top:-1px;
+    }
+
+    .margin_resize {
+        margin-top: 3.5%;
+    }
+
+    #img_right {
+        display: none;
+    }
+
+    #navbar_content li a {
+        font-size: 1em;
+    }
+    
+    .brand-class {
+        color: #F1592A;
+        font-size: 1.3em;
+        padding-top: 3%;
+    }
+}
+
+@media all and (max-width: 760px) and (min-width: 0px) {
+    #logo-nav {
+        display: none;
+    }
+    #brand_new {
+        display: block;
+    }
+
+    #navbar_content {
+        /*margin-left: -10%;*/
+        /*background-color: cyan;*/
+    }    
+
+    .half-a-border-on-right {
+        border-left: #F1592A solid 1px;
+        border-right: #F1592A solid 1px;
+        border-top: #F1592A solid 1px;
+        position: relative;
+    }
+
+    #nav_last {
+        border-left: #F1592A solid 1px;
+        border-right: #F1592A solid 1px;
+        border-top: #F1592A solid 1px;
+        border-bottom: #F1592A solid 1px;
+        position: relative;
+    }
+
+    .margin_resize {
+        margin-top: 0%;
+    }
+
+    #img_right {
+        display: none;
+    }
+    
+    .brand-class {
+        color: #F1592A;
+        font-size: 1.35em;
+        padding-top: 3.5%;
+    }
+}
+
+// END Media

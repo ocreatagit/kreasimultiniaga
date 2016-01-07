@@ -23,21 +23,21 @@
             <label class="col-sm-2 control-label">Tipe Bangunan</label>
             <div class="col-sm-3">
                 <select name="type" class="form-control">
-                    <option value="Ruko" <?php echo ($projects->tipe == 'Ruko' ? 'selected' : '') ?>>Ruko</option>
-                    <option value="Gudang" <?php echo ($projects->tipe == 'Gudang' ? 'selected' : '') ?>>Gudang</option>
+                    <option value="Ruko" <?php echo ($projects[0]->tipe == 'Ruko' ? 'selected' : '') ?>>Ruko</option>
+                    <option value="Gudang" <?php echo ($projects[0]->tipe == 'Gudang' ? 'selected' : '') ?>>Gudang</option>
                 </select>
             </div>
         </div>
         <div class="form-group">
             <label class="col-sm-2 control-label">Nama Bangunan</label>
             <div class="col-sm-10">
-                <input name="name" type="text" class="form-control" value="<?php echo $projects->judul ?>" required placeholder="nama bangunan">
+                <input name="name" type="text" class="form-control" value="<?php echo $projects[0]->judul ?>" required placeholder="nama bangunan">
             </div>
         </div>
         <div class="form-group">
             <label class="col-sm-2 control-label">Deskripsi</label>
             <div class="col-sm-10">
-                <textarea name="description" class="form-control" required rows="3"><?php echo $projects->deskripsi ?></textarea>
+                <textarea name="description" class="form-control" required rows="3"><?php echo $projects[0]->deskripsi ?></textarea>
             </div>
         </div>        
         <div class="form-group">

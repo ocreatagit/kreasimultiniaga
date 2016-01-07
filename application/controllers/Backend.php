@@ -183,19 +183,21 @@ class Backend extends CI_Controller {
                 $tgl_akhir = FALSE;
             }
 
-            $data["saldo_pindahan"] = $this->Backend_model->select_laporan_pindahan($tgl_awal, $tgl_akhir);
-            $data["kass"] = $this->Backend_model->select_laporan_saldo($tgl_awal, $tgl_akhir);
             if ($tgl_awal && $tgl_akhir) {
                 $data["periode"] = "Periode $tgl_awal S/D $tgl_akhir";
+                $data["saldo_pindahan"] = $this->Backend_model->select_laporan_pindahan($tgl_awal, $tgl_akhir);
+                $data["kass"] = $this->Backend_model->select_laporan_saldo($tgl_awal, $tgl_akhir);
             } else {
                 $data["periode"] = "";
+                $data["saldo_pindahan"] = array();
+                $data["kass"] = $this->Backend_model->select_laporan_saldo();
             }
         } else {
             $data["saldo_pindahan"] = array();
             $data["kass"] = $this->Backend_model->select_laporan_saldo();
             $data["periode"] = "";
         }
-        if($this->input->post("btn_excel")) {
+        if ($this->input->post("btn_excel")) {
             $this->excel_kas($data, 'Laporan Kas', $this->input->post("btn_excel"));
         }
 
@@ -242,7 +244,8 @@ class Backend extends CI_Controller {
         endforeach;
         /* end */
         $excel->end_excel($filename, $post);
-        print_r($saldo);exit;
+        print_r($saldo);
+        exit;
         return $excel->get_filename();
     }
 
