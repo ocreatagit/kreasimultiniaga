@@ -98,22 +98,21 @@ class Backend_model extends CI_Model {
         }
     }
 
-    function select_laporan_saldo($awal = FALSE, $akhir = FALSE) {
+    function select_laporan_saldo($awal = FALSE, $akhir = FALSE, $jenis = 0) {
         $sql = "SELECT j.IDJurnal, j.keterangan, j.keterangan, j.tanggal, j.sifat, (CASE WHEN j.sifat = 'D' THEN j.nilai_jurnal ELSE 0 END) as kasmasuk, (CASE WHEN j.sifat = 'K' THEN j.nilai_jurnal ELSE 0 END) as kaskeluar
                 FROM jurnal j 
-                " . ($awal && $akhir ? "WHERE DATE(j.tanggal) >= '" . strftime("%Y-%m-%d", strtotime($awal)) . "' AND DATE(j.tanggal) <= '" . strftime("%Y-%m-%d", strtotime($akhir)) . "'" : "") . "
+                " . ($jenis == 0 ? "" : ($jenis == 1 ? "WHERE j.sifat='D'" : "WHERE j.sifat='K'")) . ($awal && $akhir ? " AND DATE(j.tanggal) >= '" . strftime("%Y-%m-%d", strtotime($awal)) . "' AND DATE(j.tanggal) <= '" . strftime("%Y-%m-%d", strtotime($akhir)) . "'" : "") . "
                 GROUP BY j.IDJurnal ORDER BY j.tanggal ASC;";
 //        echo $sql; exit;
-
         return $this->db->query($sql)->result();
     }
 
-    function select_laporan_pindahan($awal = FALSE, $akhir = FALSE) {
+    function select_laporan_pindahan($awal = FALSE, $akhir = FALSE, $jenis = FALSE) {
         $sql = "SELECT j.IDJurnal, j.keterangan, j.keterangan, j.tanggal, j.sifat, (CASE WHEN j.sifat = 'D' THEN j.nilai_jurnal ELSE 0 END) as kasmasuk, (CASE WHEN j.sifat = 'K' THEN j.nilai_jurnal ELSE 0 END) as kaskeluar
                 FROM jurnal j 
-                " . ($awal ? "WHERE DATE(j.tanggal) <= '" . strftime("%Y-%m-%d", strtotime($awal)) . "'" : "") . "
+                " . ($jenis == 0 ? "" : ($jenis == 1 ? "WHERE j.sifat='D'" : "WHERE j.sifat='K'")) . ($awal ? "WHERE DATE(j.tanggal) <= '" . strftime("%Y-%m-%d", strtotime($awal)) . "'" : "") . "
                 GROUP BY j.IDJurnal ORDER BY j.tanggal ASC;";
-//        echo $sql; exit;        
+//        echo $sql; exit;
         return $this->db->query($sql)->result();
     }
 
@@ -199,12 +198,13 @@ class Backend_model extends CI_Model {
     }
 
     function get_last_process_month() {
-        $SQL = "SELECT * FROM process  WHERE MONTH(tanggal) = ".  date("m"). " ORDER BY tanggal DESC";
+        $SQL = "SELECT * FROM process  WHERE MONTH(tanggal) = " . date("m") . " ORDER BY tanggal DESC";
         return $this->db->query($SQL)->row();
     }
 
     function insert_process($fileName) {
         $data = array(
+            'tanggal' => strftime("%Y-%m-%d", strtotime("01-" . $this->input->post("tanggal"))),
             'path' => $fileName,
             'judul' => $this->input->post('name'),
             'deskripsi' => $this->input->post('description')
@@ -218,6 +218,7 @@ class Backend_model extends CI_Model {
 
     function update_process($IDProcess, $fileName = FALSE) {
         $data = array(
+            'tanggal' => strftime("%Y-%m-%d", strtotime("01-" . $this->input->post("tanggal"))),
             'judul' => $this->input->post('name'),
             'deskripsi' => $this->input->post('description')
         );

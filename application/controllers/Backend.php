@@ -182,15 +182,17 @@ class Backend extends CI_Controller {
             } else {
                 $tgl_akhir = FALSE;
             }
+            
+            $data["jenis_kas"] = $this->input->post("jenis");
 
             if ($tgl_awal && $tgl_akhir) {
                 $data["periode"] = "Periode $tgl_awal S/D $tgl_akhir";
-                $data["saldo_pindahan"] = $this->Backend_model->select_laporan_pindahan($tgl_awal, $tgl_akhir);
-                $data["kass"] = $this->Backend_model->select_laporan_saldo($tgl_awal, $tgl_akhir);
+                $data["saldo_pindahan"] = $this->Backend_model->select_laporan_pindahan($tgl_awal, $tgl_akhir, $this->input->post("jenis"));
+                $data["kass"] = $this->Backend_model->select_laporan_saldo($tgl_awal, $tgl_akhir, $this->input->post("jenis"));
             } else {
                 $data["periode"] = "";
                 $data["saldo_pindahan"] = array();
-                $data["kass"] = $this->Backend_model->select_laporan_saldo();
+                $data["kass"] = $this->Backend_model->select_laporan_saldo(FALSE, FALSE, $this->input->post("jenis"));
             }
         } else {
             $data["saldo_pindahan"] = array();

@@ -23,8 +23,8 @@
 |
 */
 
-//$config['base_url'] = 'http://192.168.100.5/kmn';
-$config['base_url'] = 'http://localhost/kmn';
+$config['base_url'] = 'http://192.168.100.7/kmn';
+//$config['base_url'] = 'http://localhost/kmn';
 
 /*
 |--------------------------------------------------------------------------

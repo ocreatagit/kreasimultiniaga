@@ -4,7 +4,7 @@
         foreach ($prosess as $proses):
             ?>
             <li class="event">
-                <div class="date" style="vertical-align: text-top;"><h2 style="font-size: 1.4em;"> <?php echo strftime("%d-%b-%Y", strtotime($proses->tanggal)) ?></h2></div> 
+                <div class="date" style="vertical-align: text-top;"><h2 style="font-size: 1.4em;"> <?php echo strftime("%b-%Y", strtotime($proses->tanggal)) ?></h2></div> 
                 <div class="content">
                     <div class="title proyek_header"><p><?php echo $proses->judul ?></p></div>
                     <div class="text proyek_detail" <?php

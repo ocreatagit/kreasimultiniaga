@@ -88,7 +88,7 @@ ul li a {
     width:100%;
     height:100%;
     float:left;
-    overflow:hidden;
+    /*overflow:hidden;*/
     position:relative;
     text-align:center;
     cursor:default;
@@ -98,20 +98,20 @@ ul li a {
     width:100%;
     height:100%;
     position:absolute;
-    overflow:hidden;
+    /*overflow:hidden;*/
     top:0;
     left:0;
-    opacity:0;
-    background-color:rgba(0,0,0,0.5);
-    -webkit-transition:all .4s ease-in-out;
-    transition:all .4s ease-in-out
+    /*opacity:0;*/
+    /*background-color:rgba(0,0,0,0.5);*/
+    /*-webkit-transition:all .4s ease-in-out;*/
+    /*transition:all .4s ease-in-out*/
 }
 
 .hovereffect img {
     display:block;
     position:relative;
-    -webkit-transition:all .4s linear;
-    transition:all .4s linear;
+    /*-webkit-transition:all .4s linear;*/
+    /*transition:all .4s linear;*/
 }
 
 .hovereffect h2 {
@@ -120,11 +120,12 @@ ul li a {
     text-align:center;
     position:relative;
     font-size:30px;
-    background:rgba(0,0,0,0.6);
-    -webkit-transform:translatey(-100px);
-    -ms-transform:translatey(-100px);
-    transform:translatey(-100px);
-    -webkit-transition:all .2s ease-in-out;
+    background: black;
+    /*background:rgba(0,0,0,0.6);*/
+    /*-webkit-transform:translatey(-100px);*/
+    /*-ms-transform:translatey(-100px);*/
+    /*transform:translatey(-100px);*/
+    /*-webkit-transition:all .2s ease-in-out;*/
     transition:all .2s ease-in-out;
     padding:10px;
     /*margin-top: 5%;*/
@@ -136,17 +137,18 @@ ul li a {
     text-transform:uppercase;
     color:#fff;
     border:1px solid #fff;
-    background-color:transparent;
-    opacity:0;
-    filter:alpha(opacity=0);
+    background-color:rgba(0,0,0,0.5);
+    /*background-color:transparent;*/
+    /*opacity:0;*/
+/*    filter:alpha(opacity=0);
     -webkit-transition:all .2s ease-in-out;
-    transition:all .2s ease-in-out;
-    margin:25% 0 0;
+    transition:all .2s ease-in-out;*/
+    margin:22% 0 0;
     padding:7px 14px;
     font-size: 30px;
 }
 
-.hovereffect a.info:hover {
+/*.hovereffect a.info:hover {
     box-shadow:0 0 5px #fff;
 }
 
@@ -172,7 +174,7 @@ ul li a {
 .hovereffect:hover a.info {
     -webkit-transition-delay:.2s;
     transition-delay:.2s;
-}
+}*/
 
 //---- horizontal timeline
 
@@ -286,6 +288,47 @@ ul li a {
 
 // Media
 
+@media all and (max-width : 5000px) and (min-width: 2580px) {
+    #logo-nav {
+        position: absolute;
+        display: none;
+    }
+    #brand_new {
+        display: none;
+    }
+
+    #navbar_content {
+        margin-left: 14%;
+        background-color: cyan;
+    }
+
+    .half-a-border-on-right {
+        border-right: #F1592A solid 3px;
+        position: relative;
+    }
+    .half-a-border-on-right:after {
+        padding:0;margin:0;display:block;/* not really needed */
+        content: "";
+        width:50%;
+        /*height:1px;*/
+        height: 50%;
+        background-color:transparent;
+        position: absolute;
+        right:0;
+        top:-1px;
+    }
+
+    .margin_resize {
+        margin-top: 3.5%;
+    }
+
+    .brand-class {
+        color: #F1592A;
+        font-size: 1.5em;
+        padding-top: 3%;
+    }
+}
+
 @media all and (max-width : 3000px) and (min-width: 1680px) {
     #logo-nav {
         position: absolute;
@@ -297,6 +340,7 @@ ul li a {
 
     #navbar_content {
         margin-left: 14%;
+        background-color: magenta;
     }
 
     .half-a-border-on-right {

@@ -21,6 +21,12 @@
             </div>            
         </div>
         <div class="form-group">
+            <label class="col-sm-2 control-label">Bulan - Tahun Proses</label>
+            <div class="col-sm-10">
+                <input name="tanggal" type="text" class="form-control" required placeholder="Bulan - Tahun" id="tanggal">
+            </div>
+        </div>
+        <div class="form-group">
             <label class="col-sm-2 control-label">Judul</label>
             <div class="col-sm-10">
                 <input name="name" type="text" class="form-control" required placeholder="nama bangunan">
@@ -64,7 +70,7 @@
                 <tr>
                     <td><?php echo date('d-m-Y', strtotime($process->tanggal)) ?></td>
                     <td><?php echo $process->judul ?></td>
-                    <td><?php echo substr($process->deskripsi,0,200)."..." ?> </td>
+                    <td><?php echo substr($process->deskripsi, 0, 200) . "..." ?> </td>
                     <td><?php echo img($image_properties); ?> </td>
                     <!--<td><img scr="<?php echo base_url() . "uploads/" . $process->path ?>" alt=""/></td>-->
                     <td>
@@ -92,6 +98,8 @@
 <!-- jQuery -->
 <script src="<?php echo base_url(); ?>/backend/js/jquery.js"></script>
 
+<script src="<?php echo base_url(); ?>jquery-ui/jquery-ui.js"></script>
+
 <!-- Bootstrap Core JavaScript -->
 <script src="<?php echo base_url(); ?>/backend/js/bootstrap.min.js"></script>
 <link href="<?php echo base_url(); ?>/backend/css/jquery.dataTables.min.css" type="text/css" rel="stylesheet" />
@@ -101,26 +109,38 @@
 <script src="<?php echo base_url(); ?>/backend/js/jquery.dataTables.min.js"></script>
 
 <script>
-    function readURL(input) {
+                            function readURL(input) {
 
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
+                                if (input.files && input.files[0]) {
+                                    var reader = new FileReader();
 
-            reader.onload = function (e) {
-                $('#blah').attr('src', e.target.result);
-            }
+                                    reader.onload = function (e) {
+                                        $('#blah').attr('src', e.target.result);
+                                    }
 
-            reader.readAsDataURL(input.files[0]);
-        }
-    }
-    $('#blah').hide();
+                                    reader.readAsDataURL(input.files[0]);
+                                }
+                            }
+                            $('#blah').hide();
 //    $("#imgInp").change(function () {
 //        readURL(this);
 //        $('#blah').show();
 //    });
-    $(document).ready(function () {
-        $('#datatable').DataTable();
-    });
+                            $(document).ready(function () {
+                                $('#datatable').DataTable();
+                            });
+
+                            $("#tanggal").datepicker({
+                                changeMonth: true,
+                                changeYear: true,
+                                showButtonPanel: true,
+                                dateFormat: 'mm-yy',
+                                onClose: function (dateText, inst) {
+                                    var month = $("#ui-datepicker-div .ui-datepicker-month :selected").val();
+                                    var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
+                                    $(this).datepicker('setDate', new Date(year, month, 1));
+                                }
+                            });
 </script>
 
 </body>

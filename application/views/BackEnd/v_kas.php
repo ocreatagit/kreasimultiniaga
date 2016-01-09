@@ -27,6 +27,16 @@
                             <input class="form-control siku" type="text" id="datepicker2" placeholder="Sampai" name="tanggal_akhir" value="">
                         </div>
                     </div>
+                    <div class="form-group">
+                        <label for="exampleInputName2" class="control-label col-lg-2" style="">Jenis :</label>
+                        <div class="col-lg-3">
+                            <select name="jenis" class="form-control">
+                                <option value="0" <?php if($jenis_kas == 0) echo "selected"; ?>>Semua</option>
+                                <option value="1" <?php if($jenis_kas == 1) echo "selected"; ?>>Kas Masuk</option>
+                                <option value="2" <?php if($jenis_kas == 2) echo "selected"; ?>>Kas Keluar</option>
+                            </select>
+                        </div>
+                    </div>
                     <!--                    <div class="form-group" style="">
                                             <label for="exampleInputName2" class="control-label col-lg-2" style="">Kirim ke Email :</label>
                                             <div class="col-lg-2">
@@ -121,7 +131,7 @@
                         <?php
                         if ($saldo < 0) {
                             ?>
-                            <td align="right" style="font-size: 20px; color: red;">- Rp.<?php echo number_format($saldo, 0, ',', '.'); ?>,-</td>
+                            <td align="right" style="font-size: 20px; color: red;">Rp.<?php echo number_format($saldo, 0, ',', '.'); ?>,-</td>
                             <?php
                         } else {
                             ?>

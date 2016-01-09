@@ -14,14 +14,12 @@
                             <div style="">
                                 <a style="text-decoration: none;" href="<?php echo base_url() ?>uploads/<?php echo $image_slider[$i]->path ?>" data-lightbox="roadtrip"> 
                                     <img src="<?php echo base_url() ?>uploads/<?php echo $image_slider[$i]->path ?>" style="height: 200px;">
-                                    <p class="text-center" style="color: black; opacity: 1;"> Description</p> 
                                 </a>
                             </div>
                         </li>
                     <?php } ?>
                 </ul>
             </div>
-            <h1 id="images" class="page-header" style="margin-top: 0%;">Description </h1>
             <div class="siku text-justify" style="width: 100%">
     <!--            <h1 style="border-bottom: black solid 1px; padding-bottom: 1%; margin-top: 1%;"> <i class="fa fa-book"></i> KREASI MULTI NIAGA</h1>
                 <div style="padding: 10px;" class="text-justify">

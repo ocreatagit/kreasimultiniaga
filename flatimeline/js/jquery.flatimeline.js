@@ -49,7 +49,7 @@
 		
     	var settings = $.extend({
     		toggle: true,
-    		toggleSpeed: 300,
+    		toggleSpeed: 100,
     		toggleEasing: 'swing',
             eventColor: '#999',
             gridColor: '#DDD',

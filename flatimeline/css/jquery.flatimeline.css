@@ -59,13 +59,14 @@ ul.flaTimeline li.event .circle,
 ul.flaTimeline li.event .contentWrapper{
 	display: table-cell;
 }
+
 ul.flaTimeline li.event .flaTimelineClear{
 	clear:both;
 }
 ul.flaTimeline li.event .date{
 	text-align: center;
 	cursor: pointer;
-	width: 25%;
+	width: 150px;
 }
 ul.flaTimeline li.event .contentWrapper{
 	border-left: 6px solid #DDD;
@@ -118,8 +119,8 @@ ul.flaTimeline.mobile li.event .date{
 	display: block;
 	margin: 0;
 	padding: 10px;
-        padding-top: 15px;
-	text-align: left;
+        /*padding-top: 15px;*/
+	/*text-align: left;*/
 	border-left: 6px solid #DDDDDD;
 }
 ul.flaTimeline.mobile li.event .contentWrapper{
